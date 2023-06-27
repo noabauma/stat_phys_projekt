@@ -1,0 +1,17 @@
+\begin{frame}
+  \frametitle{Implementierung}
+  \begin{itemize}
+    %\item Bibliothek zur Berechnung der Kräfte bereits gegeben.
+    \item Essentiell: Kopplung der bereitgestellten Bibliothek an \texttt{mdatom}.
+    \item Schwierigkeiten:
+    \begin{itemize}
+      \item Einheiten
+      \item Dateiformate (\texttt{.inp \& .xyz})
+      \item Anfangswerte festlegen, d.h. Positionen, Winkel und Geschwindigkeiten der Moleküle.
+      \item \texttt{mdatom} akzeptiert nur Atome der gleichen Sorte, leichte Anpassungen (Massen- und Energieberechnungen) nötig.
+    \end{itemize}
+    \item Überprüfung: Erstellen von Animationen mittels Avogadro, einer Molekül-Viewing-Software. Alternativ: Bindungsordnung mit Bibliothek berechnen.
+  \end{itemize}
+
+
+\end{frame}

@@ -1,0 +1,5278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	Parameters of the PM6 method
+	============================
+
+	File created by A. Vaucher on Nov 19 2014, 
+	modified on Sep 30, 2015,
+	based on output by MOPAC2012.
+
+	Description of the parameters, with, in parenthesis,
+	corresponding name in MOPAC output
+
+	- uss (USS) one-center energy for s orbital (eV)    
+	- upp (UPP) one-center energy for p orbital (eV)    
+	- udd (UDD) one-center energy for d orbital (eV)    
+	- zs (ZS) orbital exponent for s (bohr-1)
+	- zp (ZP) orbital exponent for p (bohr-1)
+	- zd (ZD) orbital exponent for d (bohr-1)
+	- bs (BETAS) beta parameter for s (eV)
+	- bp (BETAP) beta parameter for p (eV)
+	- bd (BETAD) beta parameter for d (eV)
+	- gss (GSS) one-center Coulomb integral s-s (eV)
+	- gpp (GPP) one-center Coulomb integral p-p (eV)
+	- gsp (GSP) one-center Coulomb integral s-p (eV)
+	- gp2 (GP2) one-center Coulomb integral p-p' (eV)
+	- hsp (HSP) one-center exchange integral s-p (eV)
+	- zsn (ZSN) internal exponent for s, needed for SC parameters (bohr-1)
+	- zpn (ZPN) internal exponent for p, needed for SC parameters (bohr-1)
+	- zdn (ZDN) internal exponent for d, needed for SC parameters (bohr-1)
+	- pcore (PO9) Klopman-Ohno term for the core-core repulsion, sometimes unequal to pss0
+	- f0sd (F0SD) Slater-Condon parameter F0sd (eV)
+	- g2sd (G2SD) Slater-Condon parameter G2sd (eV)
+	- grepa (FN11) gaussian repulsion parameter a (-)
+	- grepb (FN21) gaussian repulsion parameter b (A^-2)
+	- grepc (FN31) gaussian repulsion parameter c (A)
+
+The diatomic parameters are:
+	- exponent (ALPB) (A^-1)
+	- factor (XFAC) (-)
+
+The following is still not understood (alpha not a parameter but given for some elements) or not needed (eHeat, eisol):
+	- alpha (ALP) ALPHA PARAMETER FOR CORE (1/A)
+	- eHeat (EHEAT) HEAT OF FORMATION OF THE ATOM (EXP) (KCAL/MOL)
+	- eisol (EISOL) TOTAL ENERGY OF THE ATOM (CALC) (EV)
+
+The following are not needed anymore as they are calculated during the initialization
+	- charge (CORE) core charge of atom (e)
+	- f0dd (F0DD) Slater-Condon parameter F0dd (eV)
+	- f2dd (F2DD) Slater-Condon parameter F2dd (eV)
+	- f4dd (F4DD) Slater-Condon parameter F4dd (eV)
+	- f0pd (F0PD) Slater-Condon parameter F0pd (eV)
+	- f2pd (F2PD) Slater-Condon parameter F3pd (eV)
+	- g1pd (G1PD) Slater-Condon parameter G1pd (eV)
+	- g3pd (G3PD) Slater-Condon parameter G3pd (eV)
+	- dsp1 (DD2) Charge separation in multipole, for sp1 (bohr)
+	- dpp2 (DD3) Charge separation in multipole, for pp2 (bohr)
+	- dsd2 (DD4) Charge separation in multipole, for sd2 (bohr)
+	- dpd1 (DD5) Charge separation in multipole, for pd1 (bohr)
+	- ddd2 (DD6) Charge separation in multipole, for dd2 (bohr)
+	- pss0 (PO1) Klopman-Ohno term for ss0 (bohr)
+	- psp1 (PO2) Klopman-Ohno term for sp1 (bohr)
+	- ppp2 (PO3) Klopman-Ohno term for pp2 (bohr)
+	- psd2 (PO4) Klopman-Ohno term for sd2 (bohr)
+	- ppd1 (PO5) Klopman-Ohno term for pd1 (bohr)
+	- pdd2 (PO6) Klopman-Ohno term for dd2 (bohr)
+	- ppp0 (PO7) Klopman-Ohno term for pp0 (bohr)
+	- pdd0 (PO8) Klopman-Ohno term for dd0 (bohr)
+
+ --> 
+<root>
+<element id="1">
+  <uss>-11.24695800</uss>
+  <zs>1.26864100</zs>
+  <bs>-8.35298400</bs>
+  <gss>14.44868600</gss>
+  <eheat>52.10200000</eheat>
+  <eisol>-11.24695800</eisol>
+  <grepa>0.02418400</grepa>
+  <grepb>3.05595300</grepb>
+  <grepc>1.78601100</grepc>
+  <diatomic>
+    <pair second="1">
+      <exponent>3.54094200</exponent>
+      <factor>2.24358700</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="2">
+  <uss>-31.77096900</uss>
+  <upp>-5.85638200</upp>
+  <zs>3.31320400</zs>
+  <zp>3.65713300</zp>
+  <bs>-58.90377400</bs>
+  <bp>-37.03997400</bp>
+  <gss>9.44529900</gss>
+  <gpp>9.21454800</gpp>
+  <gsp>11.20141900</gsp>
+  <gp2>13.04611500</gp2>
+  <hsp>0.29995400</hsp>
+  <eisol>-54.09663900</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>2.98988100</exponent>
+      <factor>2.37119900</factor>
+    </pair>
+    <pair second="2">
+      <exponent>3.78355900</exponent>
+      <factor>3.45090000</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="3">
+  <uss>-4.70991200</uss>
+  <upp>-2.72258100</upp>
+  <zs>0.98104100</zs>
+  <zp>2.95344500</zp>
+  <bs>-2.28394600</bs>
+  <bp>-7.53557300</bp>
+  <gss>11.03590700</gss>
+  <gpp>11.54365000</gpp>
+  <gsp>19.99864700</gsp>
+  <gp2>9.05903600</gp2>
+  <hsp>1.64188600</hsp>
+  <eheat>38.41000000</eheat>
+  <eisol>-4.70991200</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>2.13626500</exponent>
+      <factor>2.19198500</factor>
+    </pair>
+    <pair second="2">
+      <exponent>3.11240300</exponent>
+      <factor>9.27367600</factor>
+    </pair>
+    <pair second="3">
+      <exponent>4.71467400</exponent>
+      <factor>16.11638400</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="4">
+  <uss>-16.36031500</uss>
+  <upp>-16.33921600</upp>
+  <zs>1.21253900</zs>
+  <zp>1.27648700</zp>
+  <bs>-3.19954900</bs>
+  <bp>-4.45192000</bp>
+  <gss>7.55280400</gss>
+  <gpp>12.86215300</gpp>
+  <gsp>10.20314600</gsp>
+  <gp2>13.60285800</gp2>
+  <hsp>1.50145200</hsp>
+  <eheat>76.96000000</eheat>
+  <eisol>-25.16782600</eisol>
+  <grepa>0.16418000</grepa>
+  <grepb>1.70482800</grepb>
+  <grepc>1.78559100</grepc>
+  <diatomic>
+    <pair second="1">
+      <exponent>2.47541800</exponent>
+      <factor>2.56283100</factor>
+    </pair>
+    <pair second="2">
+      <exponent>3.30670200</exponent>
+      <factor>12.54487800</factor>
+    </pair>
+    <pair second="3">
+      <exponent>2.23672800</exponent>
+      <factor>3.28716500</factor>
+    </pair>
+    <pair second="4">
+      <exponent>1.49990700</exponent>
+      <factor>0.23863300</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="5">
+  <uss>-25.96767900</uss>
+  <upp>-19.11586400</upp>
+  <zs>1.63417400</zs>
+  <zp>1.47919500</zp>
+  <bs>-4.95970600</bs>
+  <bp>-4.65675300</bp>
+  <gss>8.17934100</gss>
+  <gpp>7.82939500</gpp>
+  <gsp>7.29402100</gsp>
+  <gp2>6.40107200</gp2>
+  <hsp>1.25284500</hsp>
+  <eheat>135.70000000</eheat>
+  <eisol>-49.53668400</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>2.61523100</exponent>
+      <factor>1.32139400</factor>
+    </pair>
+    <pair second="2">
+      <exponent>3.16314000</exponent>
+      <factor>1.97417000</factor>
+    </pair>
+    <pair second="3">
+      <exponent>3.75939700</exponent>
+      <factor>7.88601800</factor>
+    </pair>
+    <pair second="4">
+      <exponent>1.88899800</exponent>
+      <factor>1.15179200</factor>
+    </pair>
+    <pair second="5">
+      <exponent>3.31862400</exponent>
+      <factor>3.59361900</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="6">
+  <uss>-51.08965300</uss>
+  <upp>-39.93792000</upp>
+  <zs>2.04755800</zs>
+  <zp>1.70284100</zp>
+  <bs>-15.38523600</bs>
+  <bp>-7.47192900</bp>
+  <gss>13.33551900</gss>
+  <gpp>10.77832600</gpp>
+  <gsp>11.52813400</gsp>
+  <gp2>9.48621200</gp2>
+  <hsp>0.71732200</hsp>
+  <eheat>170.89000000</eheat>
+  <eisol>-115.20158000</eisol>
+  <grepa>0.04630200</grepa>
+  <grepb>2.10020600</grepb>
+  <grepc>1.33395900</grepc>
+  <diatomic>
+    <pair second="1">
+      <exponent>1.02780600</exponent>
+      <factor>0.21650600</factor>
+    </pair>
+    <pair second="2">
+      <exponent>3.04270500</exponent>
+      <factor>3.21397100</factor>
+    </pair>
+    <pair second="3">
+      <exponent>3.24187400</exponent>
+      <factor>16.18000200</factor>
+    </pair>
+    <pair second="4">
+      <exponent>4.21288200</exponent>
+      <factor>25.03587900</factor>
+    </pair>
+    <pair second="5">
+      <exponent>2.91900700</exponent>
+      <factor>1.87485900</factor>
+    </pair>
+    <pair second="6">
+      <exponent>2.61371300</exponent>
+      <factor>0.81351000</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="7">
+  <uss>-57.78482300</uss>
+  <upp>-49.89303600</upp>
+  <zs>2.38040600</zs>
+  <zp>1.99924600</zp>
+  <bs>-17.97937700</bs>
+  <bp>-15.05501700</bp>
+  <gss>12.35702600</gss>
+  <gpp>12.57075600</gpp>
+  <gsp>9.63619000</gsp>
+  <gp2>10.57642500</gp2>
+  <hsp>2.87154500</hsp>
+  <eheat>113.00000000</eheat>
+  <eisol>-174.95144450</eisol>
+  <grepa>-0.00143600</grepa>
+  <grepb>0.49519600</grepb>
+  <grepc>1.70485700</grepc>
+  <diatomic>
+    <pair second="1">
+      <exponent>0.96940600</exponent>
+      <factor>0.17550600</factor>
+    </pair>
+    <pair second="2">
+      <exponent>2.81433900</exponent>
+      <factor>1.07786100</factor>
+    </pair>
+    <pair second="3">
+      <exponent>2.64062300</exponent>
+      <factor>2.82340300</factor>
+    </pair>
+    <pair second="4">
+      <exponent>2.58089500</exponent>
+      <factor>1.74060500</factor>
+    </pair>
+    <pair second="5">
+      <exponent>2.47700400</exponent>
+      <factor>0.95288200</factor>
+    </pair>
+    <pair second="6">
+      <exponent>2.68610800</exponent>
+      <factor>0.85994900</factor>
+    </pair>
+    <pair second="7">
+      <exponent>2.57450200</exponent>
+      <factor>0.67531300</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="8">
+  <uss>-91.67876100</uss>
+  <upp>-70.46094900</upp>
+  <zs>5.42175100</zs>
+  <zp>2.27096000</zp>
+  <bs>-65.63513700</bs>
+  <bp>-21.62260400</bp>
+  <gss>11.30404200</gss>
+  <gpp>13.61820500</gpp>
+  <gsp>15.80742400</gsp>
+  <gp2>10.33276500</gp2>
+  <hsp>5.01080100</hsp>
+  <eheat>59.55900000</eheat>
+  <eisol>-287.12721800</eisol>
+  <grepa>-0.01777100</grepa>
+  <grepb>3.05831000</grepb>
+  <grepc>1.89643500</grepc>
+  <diatomic>
+    <pair second="1">
+      <exponent>1.26094200</exponent>
+      <factor>0.19229500</factor>
+    </pair>
+    <pair second="2">
+      <exponent>3.65377500</exponent>
+      <factor>6.68452500</factor>
+    </pair>
+    <pair second="3">
+      <exponent>2.58444200</exponent>
+      <factor>1.96859800</factor>
+    </pair>
+    <pair second="4">
+      <exponent>3.05186700</exponent>
+      <factor>3.21815500</factor>
+    </pair>
+    <pair second="5">
+      <exponent>2.69535100</exponent>
+      <factor>1.26980100</factor>
+    </pair>
+    <pair second="6">
+      <exponent>2.88960700</exponent>
+      <factor>0.99021100</factor>
+    </pair>
+    <pair second="7">
+      <exponent>2.78429200</exponent>
+      <factor>0.76475600</factor>
+    </pair>
+    <pair second="8">
+      <exponent>2.62399800</exponent>
+      <factor>0.53511200</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="9">
+  <uss>-140.22562600</uss>
+  <upp>-98.77804400</upp>
+  <zs>6.04384900</zs>
+  <zp>2.90672200</zp>
+  <bs>-69.92259300</bs>
+  <bp>-30.44816500</bp>
+  <gss>12.44681800</gss>
+  <gpp>8.41736600</gpp>
+  <gsp>18.49608200</gsp>
+  <gp2>12.17981600</gp2>
+  <hsp>2.60438200</hsp>
+  <eheat>18.89000000</eheat>
+  <eisol>-468.15758400</eisol>
+  <grepa>-0.01079200</grepa>
+  <grepb>6.00464800</grepb>
+  <grepc>1.84772400</grepc>
+  <diatomic>
+    <pair second="1">
+      <exponent>3.13674000</exponent>
+      <factor>0.81580200</factor>
+    </pair>
+    <pair second="2">
+      <exponent>2.85654300</exponent>
+      <factor>0.74510700</factor>
+    </pair>
+    <pair second="3">
+      <exponent>3.04390100</exponent>
+      <factor>1.97598500</factor>
+    </pair>
+    <pair second="4">
+      <exponent>3.72692300</exponent>
+      <factor>3.88299300</factor>
+    </pair>
+    <pair second="5">
+      <exponent>2.82383700</exponent>
+      <factor>0.86276100</factor>
+    </pair>
+    <pair second="6">
+      <exponent>3.02760000</exponent>
+      <factor>0.73296800</factor>
+    </pair>
+    <pair second="7">
+      <exponent>2.85664600</exponent>
+      <factor>0.63585400</factor>
+    </pair>
+    <pair second="8">
+      <exponent>3.01544400</exponent>
+      <factor>0.67425100</factor>
+    </pair>
+    <pair second="9">
+      <exponent>3.17575900</exponent>
+      <factor>0.68134300</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="10">
+  <uss>-2.97872900</uss>
+  <upp>-85.44111800</upp>
+  <zs>6.00014800</zs>
+  <zp>3.83452800</zp>
+  <bs>-69.79347500</bs>
+  <bp>-33.26196200</bp>
+  <gss>19.99957400</gss>
+  <gpp>8.96356000</gpp>
+  <gsp>16.89695100</gsp>
+  <gp2>16.02779900</gp2>
+  <hsp>1.77928000</hsp>
+  <eisol>-272.22972300</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>5.99968000</exponent>
+      <factor>5.53502100</factor>
+    </pair>
+    <pair second="2">
+      <exponent>3.67775800</exponent>
+      <factor>1.96092400</factor>
+    </pair>
+    <pair second="3">
+      <exponent>2.19366600</exponent>
+      <factor>0.70495800</factor>
+    </pair>
+    <pair second="4">
+      <exponent>1.31658800</exponent>
+      <factor>0.39262800</factor>
+    </pair>
+    <pair second="5">
+      <exponent>2.75619000</exponent>
+      <factor>2.76414000</factor>
+    </pair>
+    <pair second="6">
+      <exponent>3.44118800</exponent>
+      <factor>5.46878000</factor>
+    </pair>
+    <pair second="7">
+      <exponent>4.42637000</exponent>
+      <factor>29.99960900</factor>
+    </pair>
+    <pair second="8">
+      <exponent>2.88958700</exponent>
+      <factor>0.76389900</factor>
+    </pair>
+    <pair second="9">
+      <exponent>3.67561100</exponent>
+      <factor>2.70675400</factor>
+    </pair>
+    <pair second="10">
+      <exponent>3.97456700</exponent>
+      <factor>2.79483000</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="11">
+  <uss>-4.53715300</uss>
+  <upp>-2.43301500</upp>
+  <zs>0.68632700</zs>
+  <zp>0.95006800</zp>
+  <bs>0.24485300</bs>
+  <bp>0.49199800</bp>
+  <gss>4.05997200</gss>
+  <gpp>9.28354000</gpp>
+  <gsp>7.06118300</gsp>
+  <gp2>17.03497800</gp2>
+  <hsp>0.64071500</hsp>
+  <eheat>25.65000000</eheat>
+  <eisol>-4.53715300</eisol>
+  <grepa>-1.02603600</grepa>
+  <grepb>2.01450600</grepb>
+  <grepc>1.27120200</grepc>
+  <diatomic>
+    <pair second="1">
+      <exponent>0.50032600</exponent>
+      <factor>0.20783100</factor>
+    </pair>
+    <pair second="2">
+      <exponent>1.70302900</exponent>
+      <factor>4.28251700</factor>
+    </pair>
+    <pair second="3">
+      <exponent>1.26729900</exponent>
+      <factor>0.88148200</factor>
+    </pair>
+    <pair second="4">
+      <exponent>1.25548000</exponent>
+      <factor>3.12162000</factor>
+    </pair>
+    <pair second="5">
+      <exponent>1.56996100</exponent>
+      <factor>3.18860800</factor>
+    </pair>
+    <pair second="6">
+      <exponent>2.19605000</exponent>
+      <factor>4.52042900</factor>
+    </pair>
+    <pair second="7">
+      <exponent>2.49438400</exponent>
+      <factor>8.58638700</factor>
+    </pair>
+    <pair second="8">
+      <exponent>1.98144900</exponent>
+      <factor>3.27007900</factor>
+    </pair>
+    <pair second="9">
+      <exponent>2.61955100</exponent>
+      <factor>7.04735100</factor>
+    </pair>
+    <pair second="10">
+      <exponent>1.77423600</exponent>
+      <factor>1.34303700</factor>
+    </pair>
+    <pair second="11">
+      <exponent>0.44643500</exponent>
+      <factor>0.28713700</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="12">
+  <uss>-14.57422600</uss>
+  <upp>-7.58385000</upp>
+  <zs>1.31083000</zs>
+  <zp>1.38889700</zp>
+  <bs>-9.60493200</bs>
+  <bp>3.41690800</bp>
+  <gss>7.11532800</gss>
+  <gpp>4.73731100</gpp>
+  <gsp>3.25302400</gsp>
+  <gp2>8.42848500</gp2>
+  <hsp>0.87737900</hsp>
+  <eheat>35.00000000</eheat>
+  <eisol>-22.03312400</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>2.65159400</exponent>
+      <factor>7.75823700</factor>
+    </pair>
+    <pair second="2">
+      <exponent>2.21060300</exponent>
+      <factor>3.72585000</factor>
+    </pair>
+    <pair second="3">
+      <exponent>1.18438000</exponent>
+      <factor>2.49025000</factor>
+    </pair>
+    <pair second="4">
+      <exponent>1.55759100</exponent>
+      <factor>2.06639200</factor>
+    </pair>
+    <pair second="5">
+      <exponent>2.52744100</exponent>
+      <factor>6.14670100</factor>
+    </pair>
+    <pair second="6">
+      <exponent>3.04094600</exponent>
+      <factor>10.51769000</factor>
+    </pair>
+    <pair second="7">
+      <exponent>2.07912500</exponent>
+      <factor>1.20807500</factor>
+    </pair>
+    <pair second="8">
+      <exponent>2.25152000</exponent>
+      <factor>1.53573400</factor>
+    </pair>
+    <pair second="9">
+      <exponent>3.36220800</exponent>
+      <factor>5.85902300</factor>
+    </pair>
+    <pair second="10">
+      <exponent>2.03167600</exponent>
+      <factor>1.21485900</factor>
+    </pair>
+    <pair second="11">
+      <exponent>1.50677300</exponent>
+      <factor>8.67561900</factor>
+    </pair>
+    <pair second="12">
+      <exponent>1.09357300</exponent>
+      <factor>0.46564500</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="13">
+  <uss>-24.54677800</uss>
+  <upp>-20.10443400</upp>
+  <udd>8.00439400</udd>
+  <zs>2.36426400</zs>
+  <zp>1.74910200</zp>
+  <zd>1.26938400</zd>
+  <bs>-18.37522900</bs>
+  <bp>-9.38270000</bp>
+  <bd>-20.84047400</bd>
+  <alpha>0.96879800</alpha>
+  <gss>6.65215500</gss>
+  <gpp>7.66885700</gpp>
+  <gsp>7.45943500</gsp>
+  <gp2>6.67329900</gp2>
+  <hsp>0.43506000</hsp>
+  <zsn>4.74234100</zsn>
+  <zpn>4.66962600</zpn>
+  <zdn>7.13113800</zdn>
+  <f0sd>38.84760836</f0sd>
+  <g2sd>16.48413134</g2sd>
+  <eheat>79.49000000</eheat>
+  <eisol>-48.06202500</eisol>
+  <grepa>1.00222200</grepa>
+  <grepb>1.51740000</grepb>
+  <grepc>0.65910100</grepc>
+  <diatomic>
+    <pair second="1">
+      <exponent>2.02599600</exponent>
+      <factor>2.95837900</factor>
+    </pair>
+    <pair second="2">
+      <exponent>2.25583000</exponent>
+      <factor>2.70140000</factor>
+    </pair>
+    <pair second="3">
+      <exponent>1.58159300</exponent>
+      <factor>1.10681900</factor>
+    </pair>
+    <pair second="4">
+      <exponent>1.93823700</exponent>
+      <factor>5.03721400</factor>
+    </pair>
+    <pair second="5">
+      <exponent>2.05956900</exponent>
+      <factor>2.74147900</factor>
+    </pair>
+    <pair second="6">
+      <exponent>2.26744000</exponent>
+      <factor>2.92805600</factor>
+    </pair>
+    <pair second="7">
+      <exponent>2.00975400</exponent>
+      <factor>1.34520200</factor>
+    </pair>
+    <pair second="8">
+      <exponent>2.49866000</exponent>
+      <factor>2.13139600</factor>
+    </pair>
+    <pair second="9">
+      <exponent>3.08425800</exponent>
+      <factor>1.97563500</factor>
+    </pair>
+    <pair second="10">
+      <exponent>2.44786900</exponent>
+      <factor>1.70920000</factor>
+    </pair>
+    <pair second="11">
+      <exponent>1.20287100</exponent>
+      <factor>2.07184700</factor>
+    </pair>
+    <pair second="12">
+      <exponent>1.97253000</exponent>
+      <factor>13.47244300</factor>
+    </pair>
+    <pair second="13">
+      <exponent>1.38771400</exponent>
+      <factor>2.13920000</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="14">
+  <uss>-27.35805800</uss>
+  <upp>-20.49057800</upp>
+  <udd>-22.75190000</udd>
+  <zs>1.75274100</zs>
+  <zp>1.19841300</zp>
+  <zd>2.12859300</zd>
+  <bs>-8.68690900</bs>
+  <bp>-1.85648200</bp>
+  <bd>-6.36062700</bd>
+  <gss>5.19480500</gss>
+  <gpp>5.18515000</gpp>
+  <gsp>5.09053400</gsp>
+  <gp2>4.76977500</gp2>
+  <hsp>1.42501200</hsp>
+  <zsn>8.38811100</zsn>
+  <zpn>1.84304800</zpn>
+  <zdn>0.70860000</zdn>
+  <f0sd>6.42718828</f0sd>
+  <g2sd>0.00272570</g2sd>
+  <eheat>108.39000000</eheat>
+  <eisol>-68.42826750</eisol>
+  <grepa>0.20857100</grepa>
+  <grepb>6.00048300</grepb>
+  <grepc>1.18524500</grepc>
+  <diatomic>
+    <pair second="1">
+      <exponent>1.89695000</exponent>
+      <factor>0.92419600</factor>
+    </pair>
+    <pair second="2">
+      <exponent>2.04049800</exponent>
+      <factor>1.85358300</factor>
+    </pair>
+    <pair second="3">
+      <exponent>1.78960900</exponent>
+      <factor>3.09079100</factor>
+    </pair>
+    <pair second="4">
+      <exponent>1.26313200</exponent>
+      <factor>0.62343300</factor>
+    </pair>
+    <pair second="5">
+      <exponent>1.98265300</exponent>
+      <factor>1.02828700</factor>
+    </pair>
+    <pair second="6">
+      <exponent>1.98449800</exponent>
+      <factor>0.78574500</factor>
+    </pair>
+    <pair second="7">
+      <exponent>1.81898800</exponent>
+      <factor>0.59297200</factor>
+    </pair>
+    <pair second="8">
+      <exponent>1.92360000</exponent>
+      <factor>0.75109500</factor>
+    </pair>
+    <pair second="9">
+      <exponent>2.13102800</exponent>
+      <factor>0.54351600</factor>
+    </pair>
+    <pair second="10">
+      <exponent>2.86778400</exponent>
+      <factor>14.37867600</factor>
+    </pair>
+    <pair second="11">
+      <exponent>2.00761500</exponent>
+      <factor>9.23764400</factor>
+    </pair>
+    <pair second="12">
+      <exponent>3.13974900</exponent>
+      <factor>29.99452000</factor>
+    </pair>
+    <pair second="13">
+      <exponent>1.90000000</exponent>
+      <factor>2.00000000</factor>
+    </pair>
+    <pair second="14">
+      <exponent>1.32900000</exponent>
+      <factor>0.27347700</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="15">
+  <uss>-48.72990500</uss>
+  <upp>-40.35468900</upp>
+  <udd>-7.34924600</udd>
+  <zs>2.15803300</zs>
+  <zp>1.80534300</zp>
+  <zd>1.23035800</zd>
+  <bs>-14.58378000</bs>
+  <bp>-11.74472500</bp>
+  <bd>-20.09989300</bd>
+  <gss>8.75885600</gss>
+  <gpp>8.66275400</gpp>
+  <gsp>8.48367900</gsp>
+  <gp2>7.73426400</gp2>
+  <hsp>0.87168100</hsp>
+  <zsn>6.04270600</zsn>
+  <zpn>2.37647300</zpn>
+  <zdn>7.14775000</zdn>
+  <f0sd>45.76183721</f0sd>
+  <g2sd>23.27806014</g2sd>
+  <eheat>75.57000000</eheat>
+  <eisol>-139.66793300</eisol>
+  <grepa>-0.03432000</grepa>
+  <grepb>6.00139400</grepb>
+  <grepc>2.29673700</grepc>
+  <diatomic>
+    <pair second="1">
+      <exponent>1.92653700</exponent>
+      <factor>1.23498600</factor>
+    </pair>
+    <pair second="2">
+      <exponent>2.09315800</exponent>
+      <factor>1.49021800</factor>
+    </pair>
+    <pair second="3">
+      <exponent>1.39454400</exponent>
+      <factor>1.12295000</factor>
+    </pair>
+    <pair second="4">
+      <exponent>1.80007000</exponent>
+      <factor>1.68483100</factor>
+    </pair>
+    <pair second="5">
+      <exponent>1.92316800</exponent>
+      <factor>1.45088600</factor>
+    </pair>
+    <pair second="6">
+      <exponent>1.99465300</exponent>
+      <factor>0.97951200</factor>
+    </pair>
+    <pair second="7">
+      <exponent>2.14704200</exponent>
+      <factor>0.97215400</factor>
+    </pair>
+    <pair second="8">
+      <exponent>2.22076800</exponent>
+      <factor>0.87870500</factor>
+    </pair>
+    <pair second="9">
+      <exponent>2.23435600</exponent>
+      <factor>0.51457500</factor>
+    </pair>
+    <pair second="10">
+      <exponent>2.21903600</exponent>
+      <factor>0.77495400</factor>
+    </pair>
+    <pair second="11">
+      <exponent>1.50032000</exponent>
+      <factor>2.83709500</factor>
+    </pair>
+    <pair second="12">
+      <exponent>1.38377300</exponent>
+      <factor>1.17788100</factor>
+    </pair>
+    <pair second="13">
+      <exponent>1.98072700</exponent>
+      <factor>5.05081600</factor>
+    </pair>
+    <pair second="14">
+      <exponent>3.31346600</exponent>
+      <factor>13.23912100</factor>
+    </pair>
+    <pair second="15">
+      <exponent>1.50579200</exponent>
+      <factor>0.90250100</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="16">
+  <uss>-47.53070600</uss>
+  <upp>-39.19104500</upp>
+  <udd>-46.30694400</udd>
+  <zs>2.19284400</zs>
+  <zp>1.84107800</zp>
+  <zd>3.10940100</zd>
+  <bs>-13.82744000</bs>
+  <bp>-7.66461300</bp>
+  <bd>-9.98617200</bd>
+  <gss>9.17035000</gss>
+  <gpp>8.16547300</gpp>
+  <gsp>5.94429600</gsp>
+  <gp2>7.30187800</gp2>
+  <hsp>5.00540400</hsp>
+  <zsn>0.47972200</zsn>
+  <zpn>1.01550700</zpn>
+  <zdn>4.31747000</zdn>
+  <f0sd>4.35090983</f0sd>
+  <g2sd>0.00696978</g2sd>
+  <eheat>66.40000000</eheat>
+  <eisol>-171.74301950</eisol>
+  <grepa>-0.03692800</grepa>
+  <grepb>1.79506700</grepb>
+  <grepc>2.08261800</grepc>
+  <diatomic>
+    <pair second="1">
+      <exponent>2.21597500</exponent>
+      <factor>0.84971200</factor>
+    </pair>
+    <pair second="2">
+      <exponent>1.95914900</exponent>
+      <factor>0.43761800</factor>
+    </pair>
+    <pair second="3">
+      <exponent>2.29427500</exponent>
+      <factor>2.64250200</factor>
+    </pair>
+    <pair second="4">
+      <exponent>2.78173600</exponent>
+      <factor>3.79156500</factor>
+    </pair>
+    <pair second="5">
+      <exponent>2.40369600</exponent>
+      <factor>1.12539400</factor>
+    </pair>
+    <pair second="6">
+      <exponent>2.21030500</exponent>
+      <factor>0.66684900</factor>
+    </pair>
+    <pair second="7">
+      <exponent>2.28999000</exponent>
+      <factor>0.73871000</factor>
+    </pair>
+    <pair second="8">
+      <exponent>2.38328900</exponent>
+      <factor>0.74721500</factor>
+    </pair>
+    <pair second="9">
+      <exponent>2.18718600</exponent>
+      <factor>0.37525100</factor>
+    </pair>
+    <pair second="10">
+      <exponent>2.78705800</exponent>
+      <factor>3.29616000</factor>
+    </pair>
+    <pair second="11">
+      <exponent>1.40085000</exponent>
+      <factor>0.85243400</factor>
+    </pair>
+    <pair second="12">
+      <exponent>1.50016300</exponent>
+      <factor>0.50074800</factor>
+    </pair>
+    <pair second="13">
+      <exponent>1.97670500</exponent>
+      <factor>2.34738400</factor>
+    </pair>
+    <pair second="14">
+      <exponent>1.88591600</exponent>
+      <factor>0.87665800</factor>
+    </pair>
+    <pair second="15">
+      <exponent>1.59532500</exponent>
+      <factor>0.56226600</factor>
+    </pair>
+    <pair second="16">
+      <exponent>1.79455600</exponent>
+      <factor>0.47385600</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="17">
+  <uss>-61.38993000</uss>
+  <upp>-54.48280100</upp>
+  <udd>-38.25815500</udd>
+  <zs>2.63705000</zs>
+  <zp>2.11814600</zp>
+  <zd>1.32403300</zd>
+  <bs>-2.36798800</bs>
+  <bp>-13.80213900</bp>
+  <bd>-4.03775100</bd>
+  <gss>11.14265400</gss>
+  <gpp>9.55188600</gpp>
+  <gsp>7.48788100</gsp>
+  <gp2>8.12843600</gp2>
+  <hsp>5.00426700</hsp>
+  <zsn>0.95629700</zsn>
+  <zpn>2.46406700</zpn>
+  <zdn>6.41032500</zdn>
+  <f0sd>8.67075709</f0sd>
+  <g2sd>0.05252178</g2sd>
+  <eheat>28.99000000</eheat>
+  <eisol>-252.90937600</eisol>
+  <grepa>-0.01321300</grepa>
+  <grepb>3.68702200</grepb>
+  <grepc>2.54463500</grepc>
+  <diatomic>
+    <pair second="1">
+      <exponent>2.40288600</exponent>
+      <factor>0.75483100</factor>
+    </pair>
+    <pair second="2">
+      <exponent>1.67167700</exponent>
+      <factor>0.27296400</factor>
+    </pair>
+    <pair second="3">
+      <exponent>2.78300100</exponent>
+      <factor>4.22779400</factor>
+    </pair>
+    <pair second="4">
+      <exponent>2.82267600</exponent>
+      <factor>2.50727500</factor>
+    </pair>
+    <pair second="5">
+      <exponent>2.25932300</exponent>
+      <factor>0.82212900</factor>
+    </pair>
+    <pair second="6">
+      <exponent>2.16219700</exponent>
+      <factor>0.51578700</factor>
+    </pair>
+    <pair second="7">
+      <exponent>2.17213400</exponent>
+      <factor>0.52074500</factor>
+    </pair>
+    <pair second="8">
+      <exponent>2.32323600</exponent>
+      <factor>0.58551000</factor>
+    </pair>
+    <pair second="9">
+      <exponent>2.31327000</exponent>
+      <factor>0.41112400</factor>
+    </pair>
+    <pair second="10">
+      <exponent>1.70315100</exponent>
+      <factor>0.12513300</factor>
+    </pair>
+    <pair second="11">
+      <exponent>1.81642900</exponent>
+      <factor>1.35789400</factor>
+    </pair>
+    <pair second="12">
+      <exponent>2.39180600</exponent>
+      <factor>2.43085600</factor>
+    </pair>
+    <pair second="13">
+      <exponent>2.12593900</exponent>
+      <factor>2.15345100</factor>
+    </pair>
+    <pair second="14">
+      <exponent>1.68497800</exponent>
+      <factor>0.51300000</factor>
+    </pair>
+    <pair second="15">
+      <exponent>1.46830600</exponent>
+      <factor>0.35236100</factor>
+    </pair>
+    <pair second="16">
+      <exponent>1.71543500</exponent>
+      <factor>0.35697100</factor>
+    </pair>
+    <pair second="17">
+      <exponent>1.82323900</exponent>
+      <factor>0.33291900</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="18">
+  <uss>-7.79793100</uss>
+  <upp>-83.21148700</upp>
+  <zs>6.00027200</zs>
+  <zp>5.94917000</zp>
+  <bs>-8.83984200</bs>
+  <bp>-28.42730300</bp>
+  <gss>17.85877600</gss>
+  <gpp>11.85250000</gpp>
+  <gsp>4.16845100</gsp>
+  <gp2>15.66954300</gp2>
+  <hsp>4.57454900</hsp>
+  <eisol>-264.22577700</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>4.05616700</exponent>
+      <factor>3.93344500</factor>
+    </pair>
+    <pair second="2">
+      <exponent>2.71656200</exponent>
+      <factor>1.17721100</factor>
+    </pair>
+    <pair second="3">
+      <exponent>3.12289500</exponent>
+      <factor>3.36291000</factor>
+    </pair>
+    <pair second="4">
+      <exponent>3.04400700</exponent>
+      <factor>2.75549200</factor>
+    </pair>
+    <pair second="5">
+      <exponent>2.41547100</exponent>
+      <factor>1.93158600</factor>
+    </pair>
+    <pair second="6">
+      <exponent>1.47130900</exponent>
+      <factor>0.12230900</factor>
+    </pair>
+    <pair second="7">
+      <exponent>2.32680500</exponent>
+      <factor>0.56258100</factor>
+    </pair>
+    <pair second="8">
+      <exponent>2.24067300</exponent>
+      <factor>0.35579500</factor>
+    </pair>
+    <pair second="9">
+      <exponent>3.92065800</exponent>
+      <factor>9.26971500</factor>
+    </pair>
+    <pair second="10">
+      <exponent>2.96374700</exponent>
+      <factor>1.30469700</factor>
+    </pair>
+    <pair second="11">
+      <exponent>2.16767700</exponent>
+      <factor>3.39813800</factor>
+    </pair>
+    <pair second="12">
+      <exponent>2.09266400</exponent>
+      <factor>1.97063800</factor>
+    </pair>
+    <pair second="13">
+      <exponent>2.64516500</exponent>
+      <factor>1.85200900</factor>
+    </pair>
+    <pair second="14">
+      <exponent>1.78035000</exponent>
+      <factor>1.06789000</factor>
+    </pair>
+    <pair second="15">
+      <exponent>4.37251600</exponent>
+      <factor>0.17101400</factor>
+    </pair>
+    <pair second="16">
+      <exponent>2.04939800</exponent>
+      <factor>0.65376900</factor>
+    </pair>
+    <pair second="17">
+      <exponent>2.55444900</exponent>
+      <factor>2.25609400</factor>
+    </pair>
+    <pair second="18">
+      <exponent>2.30643200</exponent>
+      <factor>0.97269900</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="19">
+  <uss>-3.80110800</uss>
+  <upp>-3.33965600</upp>
+  <zs>6.00047800</zs>
+  <zp>1.12750300</zp>
+  <bs>-8.75519500</bs>
+  <bp>-1.78806100</bp>
+  <gss>3.36925100</gss>
+  <gpp>0.99950500</gpp>
+  <gsp>6.12935100</gsp>
+  <gp2>18.99914800</gp2>
+  <hsp>0.30032500</hsp>
+  <eheat>21.42000000</eheat>
+  <eisol>-3.80110800</eisol>
+  <grepa>0.15751900</grepa>
+  <grepb>6.00056600</grepb>
+  <grepc>2.04753900</grepc>
+  <diatomic>
+    <pair second="1">
+      <exponent>0.64817300</exponent>
+      <factor>0.36934000</factor>
+    </pair>
+    <pair second="2">
+      <exponent>1.41850100</exponent>
+      <factor>2.89504500</factor>
+    </pair>
+    <pair second="3">
+      <exponent>1.03648700</exponent>
+      <factor>4.37456700</factor>
+    </pair>
+    <pair second="4">
+      <exponent>1.93188800</exponent>
+      <factor>6.73222100</factor>
+    </pair>
+    <pair second="5">
+      <exponent>2.03176800</exponent>
+      <factor>8.90054100</factor>
+    </pair>
+    <pair second="6">
+      <exponent>2.24175700</exponent>
+      <factor>10.31798700</factor>
+    </pair>
+    <pair second="7">
+      <exponent>2.32585900</exponent>
+      <factor>7.97770700</factor>
+    </pair>
+    <pair second="8">
+      <exponent>1.50857100</exponent>
+      <factor>1.01227500</factor>
+    </pair>
+    <pair second="9">
+      <exponent>3.18281700</exponent>
+      <factor>6.59297100</factor>
+    </pair>
+    <pair second="10">
+      <exponent>1.13802100</exponent>
+      <factor>0.23399500</factor>
+    </pair>
+    <pair second="11">
+      <exponent>0.88430700</exponent>
+      <factor>5.56302700</factor>
+    </pair>
+    <pair second="12">
+      <exponent>0.88481000</exponent>
+      <factor>3.29050200</factor>
+    </pair>
+    <pair second="13">
+      <exponent>1.97607600</exponent>
+      <factor>29.94470800</factor>
+    </pair>
+    <pair second="14">
+      <exponent>1.67593000</exponent>
+      <factor>8.27920000</factor>
+    </pair>
+    <pair second="15">
+      <exponent>1.44373800</exponent>
+      <factor>4.47538400</factor>
+    </pair>
+    <pair second="16">
+      <exponent>2.51215600</exponent>
+      <factor>29.52895100</factor>
+    </pair>
+    <pair second="17">
+      <exponent>1.62216300</exponent>
+      <factor>1.23148100</factor>
+    </pair>
+    <pair second="18">
+      <exponent>2.30280300</exponent>
+      <factor>9.71050800</factor>
+    </pair>
+    <pair second="19">
+      <exponent>1.43551400</exponent>
+      <factor>5.93432900</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="20">
+  <uss>-10.77005800</uss>
+  <upp>-9.75417700</upp>
+  <zs>1.52825800</zs>
+  <zp>2.06009400</zp>
+  <bs>-4.34388100</bs>
+  <bp>-1.29661200</bp>
+  <gss>5.72577300</gss>
+  <gpp>7.17210300</gpp>
+  <gsp>4.78106500</gsp>
+  <gp2>7.43187600</gp2>
+  <hsp>1.24057200</hsp>
+  <eheat>42.60000000</eheat>
+  <eisol>-15.81434300</eisol>
+  <grepa>-0.02527500</grepa>
+  <grepb>0.50001700</grepb>
+  <grepc>2.32905100</grepc>
+  <diatomic>
+    <pair second="1">
+      <exponent>2.14185900</exponent>
+      <factor>7.72860600</factor>
+    </pair>
+    <pair second="2">
+      <exponent>1.71984700</exponent>
+      <factor>2.91385200</factor>
+    </pair>
+    <pair second="5">
+      <exponent>1.70001000</exponent>
+      <factor>1.70001000</factor>
+    </pair>
+    <pair second="6">
+      <exponent>1.03530500</exponent>
+      <factor>0.14845000</factor>
+    </pair>
+    <pair second="7">
+      <exponent>2.38660000</exponent>
+      <factor>2.98807400</factor>
+    </pair>
+    <pair second="8">
+      <exponent>3.26389700</exponent>
+      <factor>17.02894600</factor>
+    </pair>
+    <pair second="9">
+      <exponent>2.64505300</exponent>
+      <factor>3.48282100</factor>
+    </pair>
+    <pair second="10">
+      <exponent>0.95453000</exponent>
+      <factor>0.33258600</factor>
+    </pair>
+    <pair second="11">
+      <exponent>3.10710400</exponent>
+      <factor>9.65750900</factor>
+    </pair>
+    <pair second="12">
+      <exponent>2.29980000</exponent>
+      <factor>8.59980000</factor>
+    </pair>
+    <pair second="13">
+      <exponent>1.61256500</exponent>
+      <factor>4.18855500</factor>
+    </pair>
+    <pair second="14">
+      <exponent>1.21878800</exponent>
+      <factor>0.33623300</factor>
+    </pair>
+    <pair second="15">
+      <exponent>1.02414200</exponent>
+      <factor>0.41084000</factor>
+    </pair>
+    <pair second="16">
+      <exponent>0.95817100</exponent>
+      <factor>0.32573900</factor>
+    </pair>
+    <pair second="17">
+      <exponent>2.38339100</exponent>
+      <factor>5.95614400</factor>
+    </pair>
+    <pair second="18">
+      <exponent>1.03488100</exponent>
+      <factor>0.29107200</factor>
+    </pair>
+    <pair second="19">
+      <exponent>1.11920000</exponent>
+      <factor>1.24032000</factor>
+    </pair>
+    <pair second="20">
+      <exponent>1.88967400</exponent>
+      <factor>30.00359100</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="21">
+  <uss>-15.54446100</uss>
+  <upp>-18.64629500</upp>
+  <udd>-16.06944400</udd>
+  <zs>1.40246900</zs>
+  <zp>1.34519600</zp>
+  <zd>1.85901200</zd>
+  <bs>-8.62094400</bs>
+  <bp>3.07594800</bp>
+  <bd>-9.76866100</bd>
+  <alpha>0.81655600</alpha>
+  <gss>4.63821534</gss>
+  <gpp>14.60487239</gpp>
+  <gsp>5.73916362</gsp>
+  <gp2>12.80259529</gp2>
+  <hsp>0.19383456</hsp>
+  <zsn>0.84841800</zsn>
+  <zpn>2.45172900</zpn>
+  <zdn>0.78937200</zdn>
+  <f0sd>4.79831300</f0sd>
+  <g2sd>5.38013600</g2sd>
+  <pcore>3.17373400</pcore>
+  <eheat>90.30000000</eheat>
+  <eisol>-33.99955186</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>1.17948500</exponent>
+      <factor>0.35119900</factor>
+    </pair>
+    <pair second="6">
+      <exponent>2.63049000</exponent>
+      <factor>8.60805200</factor>
+    </pair>
+    <pair second="7">
+      <exponent>2.27000400</exponent>
+      <factor>3.23188100</factor>
+    </pair>
+    <pair second="8">
+      <exponent>2.25651600</exponent>
+      <factor>3.05867200</factor>
+    </pair>
+    <pair second="9">
+      <exponent>3.10798500</exponent>
+      <factor>7.25234700</factor>
+    </pair>
+    <pair second="13">
+      <exponent>1.00355000</exponent>
+      <factor>0.50062000</factor>
+    </pair>
+    <pair second="14">
+      <exponent>2.01687000</exponent>
+      <factor>3.21907000</factor>
+    </pair>
+    <pair second="15">
+      <exponent>0.86816500</exponent>
+      <factor>0.62674900</factor>
+    </pair>
+    <pair second="16">
+      <exponent>0.42293900</exponent>
+      <factor>0.21185000</factor>
+    </pair>
+    <pair second="17">
+      <exponent>2.14147400</exponent>
+      <factor>2.99612900</factor>
+    </pair>
+    <pair second="21">
+      <exponent>1.13283800</exponent>
+      <factor>2.59816600</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="22">
+  <uss>-25.50797300</uss>
+  <upp>-17.26090900</upp>
+  <udd>-23.80948600</udd>
+  <zs>5.32477700</zs>
+  <zp>1.16406800</zp>
+  <zd>1.41828000</zd>
+  <bs>3.38914200</bs>
+  <bp>-3.35535000</bp>
+  <bd>-1.84282900</bd>
+  <gss>5.71785132</gss>
+  <gpp>6.41472577</gpp>
+  <gsp>5.80001498</gsp>
+  <gp2>5.62313287</gp2>
+  <hsp>1.40373164</hsp>
+  <zsn>1.04590400</zsn>
+  <zpn>1.07684400</zpn>
+  <zdn>0.71794500</zdn>
+  <f0sd>6.56056200</f0sd>
+  <g2sd>3.39623500</g2sd>
+  <eheat>112.30000000</eheat>
+  <eisol>-63.46031221</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>0.83266900</exponent>
+      <factor>0.14372200</factor>
+    </pair>
+    <pair second="5">
+      <exponent>1.62871000</exponent>
+      <factor>0.64936000</factor>
+    </pair>
+    <pair second="6">
+      <exponent>1.59797300</exponent>
+      <factor>0.41670600</factor>
+    </pair>
+    <pair second="7">
+      <exponent>1.67868600</exponent>
+      <factor>0.54546100</factor>
+    </pair>
+    <pair second="8">
+      <exponent>1.78911800</exponent>
+      <factor>0.79948600</factor>
+    </pair>
+    <pair second="9">
+      <exponent>2.30708700</exponent>
+      <factor>1.08574200</factor>
+    </pair>
+    <pair second="12">
+      <exponent>1.91134000</exponent>
+      <factor>4.33024000</factor>
+    </pair>
+    <pair second="13">
+      <exponent>1.36948600</exponent>
+      <factor>2.09184100</factor>
+    </pair>
+    <pair second="14">
+      <exponent>2.85603800</exponent>
+      <factor>6.77381500</factor>
+    </pair>
+    <pair second="15">
+      <exponent>2.15192900</exponent>
+      <factor>4.15050000</factor>
+    </pair>
+    <pair second="16">
+      <exponent>1.84643900</exponent>
+      <factor>0.94378400</factor>
+    </pair>
+    <pair second="17">
+      <exponent>1.46103400</exponent>
+      <factor>0.33329700</factor>
+    </pair>
+    <pair second="20">
+      <exponent>2.00000000</exponent>
+      <factor>4.10914100</factor>
+    </pair>
+    <pair second="22">
+      <exponent>2.64859700</exponent>
+      <factor>2.00000000</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="23">
+  <uss>-32.16227600</uss>
+  <upp>-21.57250100</upp>
+  <udd>-34.50624500</udd>
+  <zs>1.97433000</zs>
+  <zp>1.06310600</zp>
+  <zd>1.39480600</zd>
+  <bs>-1.21133000</bs>
+  <bp>0.74074600</bp>
+  <bd>3.15366900</bd>
+  <gss>5.98311618</gss>
+  <gpp>4.49976294</gpp>
+  <gsp>4.73676949</gsp>
+  <gp2>3.94448115</gp2>
+  <hsp>0.90110519</hsp>
+  <zsn>1.09442600</zsn>
+  <zpn>0.75537800</zpn>
+  <zdn>1.09936700</zdn>
+  <f0sd>6.81002100</f0sd>
+  <g2sd>1.83140700</g2sd>
+  <eheat>122.90000000</eheat>
+  <eisol>-100.61396315</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>1.28013300</exponent>
+      <factor>0.10520400</factor>
+    </pair>
+    <pair second="6">
+      <exponent>2.78985500</exponent>
+      <factor>1.93876000</factor>
+    </pair>
+    <pair second="7">
+      <exponent>1.60754000</exponent>
+      <factor>0.27672500</factor>
+    </pair>
+    <pair second="8">
+      <exponent>1.62397300</exponent>
+      <factor>0.41531200</factor>
+    </pair>
+    <pair second="9">
+      <exponent>1.82516000</exponent>
+      <factor>0.34281500</factor>
+    </pair>
+    <pair second="11">
+      <exponent>2.55101000</exponent>
+      <factor>8.27602000</factor>
+    </pair>
+    <pair second="15">
+      <exponent>2.54915400</exponent>
+      <factor>6.25062400</factor>
+    </pair>
+    <pair second="16">
+      <exponent>2.70412400</exponent>
+      <factor>2.03503900</factor>
+    </pair>
+    <pair second="17">
+      <exponent>1.68852900</exponent>
+      <factor>0.24365700</factor>
+    </pair>
+    <pair second="19">
+      <exponent>4.52136000</exponent>
+      <factor>2.02659000</factor>
+    </pair>
+    <pair second="23">
+      <exponent>4.83239100</exponent>
+      <factor>10.77989200</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="24">
+  <uss>-34.86433900</uss>
+  <upp>-26.97861500</upp>
+  <udd>-54.43103600</udd>
+  <zs>3.28346000</zs>
+  <zp>1.02939400</zp>
+  <zd>1.62311900</zd>
+  <bs>-5.12261500</bs>
+  <bp>3.92671100</bp>
+  <bd>-4.23055000</bd>
+  <gss>8.85557242</gss>
+  <gpp>5.05309383</gpp>
+  <gsp>5.58863066</gsp>
+  <gp2>4.42952965</gp2>
+  <hsp>0.64803936</hsp>
+  <zsn>1.61985300</zsn>
+  <zpn>0.84826600</zpn>
+  <zdn>1.40501500</zdn>
+  <f0sd>6.15013600</f0sd>
+  <g2sd>2.00030000</g2sd>
+  <eheat>95.00000000</eheat>
+  <eisol>-185.72482255</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>0.88266100</exponent>
+      <factor>0.04446900</factor>
+    </pair>
+    <pair second="6">
+      <exponent>3.65675400</exponent>
+      <factor>6.11018700</factor>
+    </pair>
+    <pair second="7">
+      <exponent>3.02918600</exponent>
+      <factor>1.92032400</factor>
+    </pair>
+    <pair second="8">
+      <exponent>2.50000000</exponent>
+      <factor>1.05551100</factor>
+    </pair>
+    <pair second="9">
+      <exponent>2.71652100</exponent>
+      <factor>0.73760700</factor>
+    </pair>
+    <pair second="11">
+      <exponent>2.29505600</exponent>
+      <factor>8.36427400</factor>
+    </pair>
+    <pair second="14">
+      <exponent>1.86076000</exponent>
+      <factor>1.02911000</factor>
+    </pair>
+    <pair second="15">
+      <exponent>1.69538300</exponent>
+      <factor>0.60017700</factor>
+    </pair>
+    <pair second="16">
+      <exponent>2.26097800</exponent>
+      <factor>0.55033400</factor>
+    </pair>
+    <pair second="17">
+      <exponent>2.15261800</exponent>
+      <factor>0.36907300</factor>
+    </pair>
+    <pair second="19">
+      <exponent>2.00000000</exponent>
+      <factor>2.00000000</factor>
+    </pair>
+    <pair second="24">
+      <exponent>4.65541900</exponent>
+      <factor>10.31860700</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="25">
+  <uss>-51.46000000</uss>
+  <upp>-37.54399000</upp>
+  <udd>-47.65537000</udd>
+  <zs>2.13168000</zs>
+  <zp>1.52588000</zp>
+  <zd>2.60780000</zd>
+  <bs>-4.18529000</bs>
+  <bp>-3.47963000</bp>
+  <bd>-13.47319000</bd>
+  <gss>6.19098954</gss>
+  <gpp>8.28459435</gpp>
+  <gsp>6.75742701</gsp>
+  <gp2>7.26225507</gp2>
+  <hsp>1.52051823</hsp>
+  <zsn>1.13245000</zsn>
+  <zpn>1.39074000</zpn>
+  <zdn>0.96255000</zdn>
+  <f0sd>7.69092000</f0sd>
+  <g2sd>1.10533000</g2sd>
+  <eheat>67.70000000</eheat>
+  <eisol>-195.80157708</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>2.30994000</exponent>
+      <factor>1.26921000</factor>
+    </pair>
+    <pair second="6">
+      <exponent>3.00075000</exponent>
+      <factor>2.58311000</factor>
+    </pair>
+    <pair second="7">
+      <exponent>2.92147000</exponent>
+      <factor>1.95675000</factor>
+    </pair>
+    <pair second="8">
+      <exponent>2.57754000</exponent>
+      <factor>1.28562000</factor>
+    </pair>
+    <pair second="9">
+      <exponent>2.79195000</exponent>
+      <factor>1.11307000</factor>
+    </pair>
+    <pair second="13">
+      <exponent>1.76836000</exponent>
+      <factor>1.04079000</factor>
+    </pair>
+    <pair second="14">
+      <exponent>1.93795900</exponent>
+      <factor>0.95058000</factor>
+    </pair>
+    <pair second="15">
+      <exponent>1.94702000</exponent>
+      <factor>1.13032000</factor>
+    </pair>
+    <pair second="16">
+      <exponent>2.48251000</exponent>
+      <factor>1.61265000</factor>
+    </pair>
+    <pair second="17">
+      <exponent>1.65701000</exponent>
+      <factor>0.20185000</factor>
+    </pair>
+    <pair second="20">
+      <exponent>1.49144000</exponent>
+      <factor>0.62018000</factor>
+    </pair>
+    <pair second="25">
+      <exponent>2.66542000</exponent>
+      <factor>2.46004000</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="26">
+  <uss>-70.51504700</uss>
+  <upp>-62.96306900</upp>
+  <udd>-103.63179000</udd>
+  <zs>1.47915000</zs>
+  <zp>6.00224600</zp>
+  <zd>1.08074700</zd>
+  <bs>8.02762100</bs>
+  <bp>-1.12576000</bp>
+  <bd>-3.50753100</bd>
+  <gss>7.97703631</gss>
+  <gpp>8.29575771</gpp>
+  <gsp>7.78686721</gsp>
+  <gp2>7.27204085</gp2>
+  <hsp>1.88018928</hsp>
+  <zsn>1.45915200</zsn>
+  <zpn>1.39261400</zpn>
+  <zdn>2.16190900</zdn>
+  <f0sd>9.30016500</f0sd>
+  <g2sd>1.60134500</g2sd>
+  <pcore>1.27209200</pcore>
+  <eheat>99.30000000</eheat>
+  <eisol>-426.83526638</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>0.85448800</exponent>
+      <factor>0.02519500</factor>
+    </pair>
+    <pair second="6">
+      <exponent>3.99134300</exponent>
+      <factor>0.36683500</factor>
+    </pair>
+    <pair second="7">
+      <exponent>2.50048600</exponent>
+      <factor>0.15534200</factor>
+    </pair>
+    <pair second="8">
+      <exponent>1.72631300</exponent>
+      <factor>0.13642200</factor>
+    </pair>
+    <pair second="9">
+      <exponent>4.29470700</exponent>
+      <factor>3.65735000</factor>
+    </pair>
+    <pair second="15">
+      <exponent>2.56753400</exponent>
+      <factor>0.43129100</factor>
+    </pair>
+    <pair second="16">
+      <exponent>0.98899100</exponent>
+      <factor>0.03347800</factor>
+    </pair>
+    <pair second="17">
+      <exponent>1.22979300</exponent>
+      <factor>0.01947300</factor>
+    </pair>
+    <pair second="19">
+      <exponent>2.00000000</exponent>
+      <factor>6.00000000</factor>
+    </pair>
+    <pair second="26">
+      <exponent>2.72078500</exponent>
+      <factor>1.84689000</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="27">
+  <uss>-21.03941300</uss>
+  <upp>10.00000000</upp>
+  <udd>-28.06897100</udd>
+  <zs>1.16661300</zs>
+  <zp>3.00000000</zp>
+  <zd>1.86021800</zd>
+  <bs>-8.99206200</bs>
+  <bp>-0.10000000</bp>
+  <bd>-2.48150900</bd>
+  <gss>2.84015233</gss>
+  <gpp>5.95696848</gpp>
+  <gsp>3.42593321</gsp>
+  <gp2>5.22186395</gp2>
+  <hsp>0.39008746</hsp>
+  <zsn>0.51951800</zsn>
+  <zpn>1.00000000</zpn>
+  <zdn>0.35211500</zdn>
+  <f0sd>1.44628300</f0sd>
+  <g2sd>1.68022500</g2sd>
+  <eheat>102.40000000</eheat>
+  <eisol>-167.65660749</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>2.96651800</exponent>
+      <factor>2.47246500</factor>
+    </pair>
+    <pair second="5">
+      <exponent>3.20000000</exponent>
+      <factor>1.00000000</factor>
+    </pair>
+    <pair second="6">
+      <exponent>3.71623300</exponent>
+      <factor>2.12393000</factor>
+    </pair>
+    <pair second="7">
+      <exponent>3.61863800</exponent>
+      <factor>2.65383600</factor>
+    </pair>
+    <pair second="8">
+      <exponent>3.72691100</exponent>
+      <factor>5.25202200</factor>
+    </pair>
+    <pair second="9">
+      <exponent>3.95634700</exponent>
+      <factor>4.58503000</factor>
+    </pair>
+    <pair second="14">
+      <exponent>2.46980500</exponent>
+      <factor>1.09024000</factor>
+    </pair>
+    <pair second="15">
+      <exponent>1.15250500</exponent>
+      <factor>0.10593600</factor>
+    </pair>
+    <pair second="16">
+      <exponent>2.42925500</exponent>
+      <factor>0.43670700</factor>
+    </pair>
+    <pair second="17">
+      <exponent>3.21749700</exponent>
+      <factor>1.03341400</factor>
+    </pair>
+    <pair second="27">
+      <exponent>3.28816600</exponent>
+      <factor>3.91961800</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="28">
+  <uss>-47.62024700</uss>
+  <upp>-32.87840800</upp>
+  <udd>-93.02639500</udd>
+  <zs>1.59182800</zs>
+  <zp>2.30473900</zp>
+  <zd>2.51476100</zd>
+  <bs>-9.15152100</bs>
+  <bp>-8.08669600</bp>
+  <bd>-8.65591000</bd>
+  <alpha>2.89496000</alpha>
+  <gss>4.08087594</gss>
+  <gpp>4.48754520</gpp>
+  <gsp>4.09945168</gsp>
+  <gp2>3.93377111</gp2>
+  <hsp>0.99349774</hsp>
+  <zsn>0.74647000</zsn>
+  <zpn>0.75332700</zpn>
+  <zdn>1.46134500</zdn>
+  <f0sd>4.65166400</f0sd>
+  <g2sd>1.88050200</g2sd>
+  <pcore>1.58697900</pcore>
+  <eheat>102.80000000</eheat>
+  <eisol>-485.16555989</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>2.63528000</exponent>
+      <factor>1.76312400</factor>
+    </pair>
+    <pair second="6">
+      <exponent>4.28551300</exponent>
+      <factor>7.13332400</factor>
+    </pair>
+    <pair second="7">
+      <exponent>3.84521500</exponent>
+      <factor>4.28680000</factor>
+    </pair>
+    <pair second="8">
+      <exponent>2.93723200</exponent>
+      <factor>0.88594200</factor>
+    </pair>
+    <pair second="9">
+      <exponent>3.44024100</exponent>
+      <factor>1.08820800</factor>
+    </pair>
+    <pair second="14">
+      <exponent>2.06888100</exponent>
+      <factor>0.93864600</factor>
+    </pair>
+    <pair second="15">
+      <exponent>3.26028300</exponent>
+      <factor>5.05972700</factor>
+    </pair>
+    <pair second="16">
+      <exponent>2.00275200</exponent>
+      <factor>0.27485200</factor>
+    </pair>
+    <pair second="17">
+      <exponent>2.20051200</exponent>
+      <factor>0.20231300</factor>
+    </pair>
+    <pair second="28">
+      <exponent>1.09796000</exponent>
+      <factor>0.03547400</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="29">
+  <uss>-97.00220500</uss>
+  <upp>-1.00000000</upp>
+  <udd>-110.44259200</udd>
+  <zs>1.66909600</zs>
+  <zp>3.00000000</zp>
+  <zd>2.73499000</zd>
+  <bs>-9.36950800</bs>
+  <bp>-0.10000000</bp>
+  <bd>-16.98209200</bd>
+  <gss>10.38491002</gss>
+  <gpp>17.87090545</gpp>
+  <gsp>12.14536058</gsp>
+  <gp2>15.66559186</gp2>
+  <hsp>2.03739400</hsp>
+  <zsn>1.89959800</zsn>
+  <zpn>3.00000000</zpn>
+  <zdn>1.48431700</zdn>
+  <f0sd>9.84880700</f0sd>
+  <g2sd>9.84757700</g2sd>
+  <eheat>80.70000000</eheat>
+  <eisol>-656.59528257</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>2.33535900</exponent>
+      <factor>0.60359100</factor>
+    </pair>
+    <pair second="6">
+      <exponent>4.63877300</exponent>
+      <factor>7.06779400</factor>
+    </pair>
+    <pair second="7">
+      <exponent>4.21433700</exponent>
+      <factor>3.22866700</factor>
+    </pair>
+    <pair second="8">
+      <exponent>3.95995100</exponent>
+      <factor>2.00000000</factor>
+    </pair>
+    <pair second="9">
+      <exponent>4.47883200</exponent>
+      <factor>1.28210800</factor>
+    </pair>
+    <pair second="15">
+      <exponent>0.21064000</exponent>
+      <factor>0.02012600</factor>
+    </pair>
+    <pair second="16">
+      <exponent>0.27311200</exponent>
+      <factor>0.00524800</factor>
+    </pair>
+    <pair second="17">
+      <exponent>2.77653100</exponent>
+      <factor>0.13906500</factor>
+    </pair>
+    <pair second="29">
+      <exponent>3.61684600</exponent>
+      <factor>5.18437600</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="30">
+  <uss>-18.04086200</uss>
+  <upp>-7.83489500</upp>
+  <zs>1.51287500</zs>
+  <zp>1.78948200</zp>
+  <bs>-13.27658300</bs>
+  <bp>1.47964200</bp>
+  <gss>8.70742400</gss>
+  <gpp>20.00004100</gpp>
+  <gsp>3.43611600</gsp>
+  <gp2>6.78278500</gp2>
+  <hsp>0.66203600</hsp>
+  <eheat>31.17000000</eheat>
+  <eisol>-27.37430000</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>1.98789100</exponent>
+      <factor>3.10919300</factor>
+    </pair>
+    <pair second="6">
+      <exponent>1.80232700</exponent>
+      <factor>0.99146500</factor>
+    </pair>
+    <pair second="7">
+      <exponent>1.84457900</exponent>
+      <factor>0.95247600</factor>
+    </pair>
+    <pair second="8">
+      <exponent>2.33505400</exponent>
+      <factor>2.26531300</factor>
+    </pair>
+    <pair second="9">
+      <exponent>2.41002100</exponent>
+      <factor>1.22554500</factor>
+    </pair>
+    <pair second="14">
+      <exponent>1.83205800</exponent>
+      <factor>3.78390500</factor>
+    </pair>
+    <pair second="15">
+      <exponent>1.22048000</exponent>
+      <factor>0.58153000</factor>
+    </pair>
+    <pair second="16">
+      <exponent>1.45500000</exponent>
+      <factor>0.64800000</factor>
+    </pair>
+    <pair second="17">
+      <exponent>1.62517600</exponent>
+      <factor>0.72135100</factor>
+    </pair>
+    <pair second="20">
+      <exponent>1.11918000</exponent>
+      <factor>1.24029000</factor>
+    </pair>
+    <pair second="30">
+      <exponent>0.92900000</exponent>
+      <factor>0.46500000</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="31">
+  <uss>-30.60022600</uss>
+  <upp>-21.03242500</upp>
+  <zs>2.33906700</zs>
+  <zp>1.72959200</zp>
+  <bs>-10.80832000</bs>
+  <bp>-4.18550000</bp>
+  <gss>10.35488500</gss>
+  <gpp>6.09018400</gpp>
+  <gsp>7.99367400</gsp>
+  <gp2>6.29922600</gp2>
+  <hsp>1.29597400</hsp>
+  <eheat>65.40000000</eheat>
+  <eisol>-57.18661800</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>1.84735000</exponent>
+      <factor>1.38665200</factor>
+    </pair>
+    <pair second="6">
+      <exponent>2.32541000</exponent>
+      <factor>1.96299000</factor>
+    </pair>
+    <pair second="7">
+      <exponent>2.12182000</exponent>
+      <factor>1.18833800</factor>
+    </pair>
+    <pair second="8">
+      <exponent>2.34834700</exponent>
+      <factor>1.52364400</factor>
+    </pair>
+    <pair second="9">
+      <exponent>2.67986900</exponent>
+      <factor>1.41694200</factor>
+    </pair>
+    <pair second="14">
+      <exponent>1.91378000</exponent>
+      <factor>1.00229000</factor>
+    </pair>
+    <pair second="15">
+      <exponent>2.97965000</exponent>
+      <factor>0.50000000</factor>
+    </pair>
+    <pair second="16">
+      <exponent>2.23210800</exponent>
+      <factor>2.45628400</factor>
+    </pair>
+    <pair second="17">
+      <exponent>2.02471000</exponent>
+      <factor>1.18666100</factor>
+    </pair>
+    <pair second="31">
+      <exponent>1.33464300</exponent>
+      <factor>1.19839400</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="32">
+  <uss>-32.74733800</uss>
+  <upp>-24.70901600</upp>
+  <zs>2.54607300</zs>
+  <zp>1.70913000</zp>
+  <bs>-14.85429700</bs>
+  <bp>-2.59126000</bp>
+  <gss>7.51830100</gss>
+  <gpp>6.06680100</gpp>
+  <gsp>6.59444300</gsp>
+  <gp2>5.30594700</gp2>
+  <hsp>0.29074200</hsp>
+  <eheat>89.50000000</eheat>
+  <eisol>-76.67259900</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>2.20679300</exponent>
+      <factor>1.73322600</factor>
+    </pair>
+    <pair second="6">
+      <exponent>2.25746900</exponent>
+      <factor>1.29751000</factor>
+    </pair>
+    <pair second="7">
+      <exponent>1.98822600</exponent>
+      <factor>0.63750600</factor>
+    </pair>
+    <pair second="8">
+      <exponent>2.13941300</exponent>
+      <factor>0.82696400</factor>
+    </pair>
+    <pair second="9">
+      <exponent>2.38477700</exponent>
+      <factor>0.65197700</factor>
+    </pair>
+    <pair second="14">
+      <exponent>0.29972100</exponent>
+      <factor>0.17868000</factor>
+    </pair>
+    <pair second="15">
+      <exponent>2.46929100</exponent>
+      <factor>5.61634900</factor>
+    </pair>
+    <pair second="16">
+      <exponent>2.02458800</exponent>
+      <factor>1.16095700</factor>
+    </pair>
+    <pair second="17">
+      <exponent>1.77122800</exponent>
+      <factor>0.54523900</factor>
+    </pair>
+    <pair second="25">
+      <exponent>2.38283400</exponent>
+      <factor>2.25515100</factor>
+    </pair>
+    <pair second="27">
+      <exponent>2.85261000</exponent>
+      <factor>2.15185000</factor>
+    </pair>
+    <pair second="32">
+      <exponent>2.01900000</exponent>
+      <factor>3.02300000</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="33">
+  <uss>-37.95696500</uss>
+  <upp>-38.45370100</upp>
+  <udd>-30.28265800</udd>
+  <zs>2.92617100</zs>
+  <zp>1.76519100</zp>
+  <zd>1.39214200</zd>
+  <bs>-11.96372500</bs>
+  <bp>-7.34007300</bp>
+  <bd>3.75300500</bd>
+  <gss>6.66503000</gss>
+  <gpp>9.31083600</gpp>
+  <gsp>6.21386700</gsp>
+  <gp2>8.71254200</gp2>
+  <hsp>0.28066200</hsp>
+  <zsn>2.00654300</zsn>
+  <zpn>3.31683200</zpn>
+  <zdn>4.65344000</zdn>
+  <f0sd>13.44795696</f0sd>
+  <g2sd>2.17074116</g2sd>
+  <eheat>72.30000000</eheat>
+  <eisol>-122.92860200</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>1.99352700</exponent>
+      <factor>1.09058900</factor>
+    </pair>
+    <pair second="6">
+      <exponent>1.85506900</exponent>
+      <factor>0.57909800</factor>
+    </pair>
+    <pair second="7">
+      <exponent>1.49654300</exponent>
+      <factor>0.27333700</factor>
+    </pair>
+    <pair second="8">
+      <exponent>2.00395000</exponent>
+      <factor>0.70161400</factor>
+    </pair>
+    <pair second="9">
+      <exponent>2.01258300</exponent>
+      <factor>0.40262800</factor>
+    </pair>
+    <pair second="13">
+      <exponent>1.15278600</exponent>
+      <factor>1.00358000</factor>
+    </pair>
+    <pair second="14">
+      <exponent>1.91560000</exponent>
+      <factor>1.43070600</factor>
+    </pair>
+    <pair second="16">
+      <exponent>1.95436800</exponent>
+      <factor>1.03378400</factor>
+    </pair>
+    <pair second="17">
+      <exponent>1.69107000</exponent>
+      <factor>0.45443300</factor>
+    </pair>
+    <pair second="22">
+      <exponent>1.93291100</exponent>
+      <factor>1.58131700</factor>
+    </pair>
+    <pair second="27">
+      <exponent>3.36814000</exponent>
+      <factor>1.67524000</factor>
+    </pair>
+    <pair second="30">
+      <exponent>1.45913000</exponent>
+      <factor>3.15657100</factor>
+    </pair>
+    <pair second="31">
+      <exponent>1.73097700</exponent>
+      <factor>1.68629800</factor>
+    </pair>
+    <pair second="33">
+      <exponent>1.58826400</exponent>
+      <factor>0.73730700</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="34">
+  <uss>-32.67108800</uss>
+  <upp>-32.52222000</upp>
+  <zs>2.51236600</zs>
+  <zp>2.00757600</zp>
+  <bs>2.63600100</bs>
+  <bp>-9.55770000</bp>
+  <gss>5.52235600</gss>
+  <gpp>8.04239100</gpp>
+  <gsp>2.90756200</gsp>
+  <gp2>6.73510600</gp2>
+  <hsp>3.09578900</hsp>
+  <eheat>54.30000000</eheat>
+  <eisol>-139.27436650</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>2.03506800</exponent>
+      <factor>0.84799800</factor>
+    </pair>
+    <pair second="6">
+      <exponent>2.38711800</exponent>
+      <factor>1.11478700</factor>
+    </pair>
+    <pair second="7">
+      <exponent>1.93776400</exponent>
+      <factor>0.48284000</factor>
+    </pair>
+    <pair second="8">
+      <exponent>2.48426300</exponent>
+      <factor>0.95516100</factor>
+    </pair>
+    <pair second="9">
+      <exponent>2.30218000</exponent>
+      <factor>0.44480600</factor>
+    </pair>
+    <pair second="14">
+      <exponent>1.52981700</exponent>
+      <factor>0.51822700</factor>
+    </pair>
+    <pair second="15">
+      <exponent>1.04818300</exponent>
+      <factor>0.29205200</factor>
+    </pair>
+    <pair second="16">
+      <exponent>1.47960600</exponent>
+      <factor>0.39172100</factor>
+    </pair>
+    <pair second="17">
+      <exponent>2.12886100</exponent>
+      <factor>0.98106700</factor>
+    </pair>
+    <pair second="25">
+      <exponent>2.64803800</exponent>
+      <factor>2.18072000</factor>
+    </pair>
+    <pair second="27">
+      <exponent>2.52345000</exponent>
+      <factor>2.20241000</factor>
+    </pair>
+    <pair second="30">
+      <exponent>1.18624200</exponent>
+      <factor>0.51159400</factor>
+    </pair>
+    <pair second="32">
+      <exponent>2.66905700</exponent>
+      <factor>5.87205100</factor>
+    </pair>
+    <pair second="33">
+      <exponent>1.66528000</exponent>
+      <factor>0.71126100</factor>
+    </pair>
+    <pair second="34">
+      <exponent>1.79589400</exponent>
+      <factor>0.82182300</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="35">
+  <uss>-45.83436400</uss>
+  <upp>-50.29367500</upp>
+  <udd>7.08673800</udd>
+  <zs>4.67068400</zs>
+  <zp>2.03562600</zp>
+  <zd>1.52103100</zd>
+  <bs>-32.13166500</bs>
+  <bp>-9.51448400</bp>
+  <bd>-9.83912400</bd>
+  <gss>7.61679100</gss>
+  <gpp>9.64921600</gpp>
+  <gsp>5.01042500</gsp>
+  <gp2>8.34379200</gp2>
+  <hsp>4.99655300</hsp>
+  <zsn>3.09477700</zsn>
+  <zpn>3.06576400</zpn>
+  <zdn>2.82000300</zdn>
+  <f0sd>16.09971096</f0sd>
+  <g2sd>8.88386676</g2sd>
+  <eheat>26.74000000</eheat>
+  <eisol>-226.96090700</eisol>
+  <grepa>-0.00499600</grepa>
+  <grepb>6.00129200</grepb>
+  <grepc>2.89515300</grepc>
+  <diatomic>
+    <pair second="1">
+      <exponent>2.19280300</exponent>
+      <factor>0.85037800</factor>
+    </pair>
+    <pair second="2">
+      <exponent>2.12827500</exponent>
+      <factor>1.06204300</factor>
+    </pair>
+    <pair second="3">
+      <exponent>2.07444100</exponent>
+      <factor>1.85886600</factor>
+    </pair>
+    <pair second="4">
+      <exponent>2.36714600</exponent>
+      <factor>1.94093300</factor>
+    </pair>
+    <pair second="5">
+      <exponent>2.30789000</exponent>
+      <factor>1.22642000</factor>
+    </pair>
+    <pair second="6">
+      <exponent>2.01508600</exponent>
+      <factor>0.57068600</factor>
+    </pair>
+    <pair second="7">
+      <exponent>4.22490100</exponent>
+      <factor>30.00013300</factor>
+    </pair>
+    <pair second="8">
+      <exponent>2.28304600</exponent>
+      <factor>0.70658400</factor>
+    </pair>
+    <pair second="9">
+      <exponent>2.03176500</exponent>
+      <factor>0.29350000</factor>
+    </pair>
+    <pair second="10">
+      <exponent>2.46417200</exponent>
+      <factor>1.00615900</factor>
+    </pair>
+    <pair second="11">
+      <exponent>1.62221800</exponent>
+      <factor>1.75293700</factor>
+    </pair>
+    <pair second="12">
+      <exponent>2.19569700</exponent>
+      <factor>2.91628000</factor>
+    </pair>
+    <pair second="13">
+      <exponent>1.89414100</exponent>
+      <factor>2.35713000</factor>
+    </pair>
+    <pair second="14">
+      <exponent>1.57082500</exponent>
+      <factor>0.58951100</factor>
+    </pair>
+    <pair second="15">
+      <exponent>1.40213900</exponent>
+      <factor>0.45652100</factor>
+    </pair>
+    <pair second="16">
+      <exponent>1.50987400</exponent>
+      <factor>0.28668800</factor>
+    </pair>
+    <pair second="17">
+      <exponent>1.71033100</exponent>
+      <factor>0.38923800</factor>
+    </pair>
+    <pair second="18">
+      <exponent>2.45080100</exponent>
+      <factor>3.26266800</factor>
+    </pair>
+    <pair second="19">
+      <exponent>1.61609300</exponent>
+      <factor>3.32279500</factor>
+    </pair>
+    <pair second="20">
+      <exponent>2.07840500</exponent>
+      <factor>4.05291000</factor>
+    </pair>
+    <pair second="21">
+      <exponent>1.79348600</exponent>
+      <factor>2.09825100</factor>
+    </pair>
+    <pair second="22">
+      <exponent>1.67484700</exponent>
+      <factor>0.88343400</factor>
+    </pair>
+    <pair second="23">
+      <exponent>1.90290400</exponent>
+      <factor>0.61269800</factor>
+    </pair>
+    <pair second="24">
+      <exponent>1.56602800</exponent>
+      <factor>0.21785300</factor>
+    </pair>
+    <pair second="25">
+      <exponent>2.28382000</exponent>
+      <factor>1.18358000</factor>
+    </pair>
+    <pair second="26">
+      <exponent>3.64178200</exponent>
+      <factor>6.06192100</factor>
+    </pair>
+    <pair second="27">
+      <exponent>2.63268800</exponent>
+      <factor>0.42514800</factor>
+    </pair>
+    <pair second="28">
+      <exponent>2.77213600</exponent>
+      <factor>0.63214500</factor>
+    </pair>
+    <pair second="29">
+      <exponent>5.82640700</exponent>
+      <factor>0.76851700</factor>
+    </pair>
+    <pair second="30">
+      <exponent>1.41612000</exponent>
+      <factor>0.74702700</factor>
+    </pair>
+    <pair second="31">
+      <exponent>1.81910500</exponent>
+      <factor>1.26103600</factor>
+    </pair>
+    <pair second="32">
+      <exponent>1.60236600</exponent>
+      <factor>0.62773700</factor>
+    </pair>
+    <pair second="33">
+      <exponent>1.52017000</exponent>
+      <factor>0.51415300</factor>
+    </pair>
+    <pair second="34">
+      <exponent>1.48371300</exponent>
+      <factor>0.31934200</factor>
+    </pair>
+    <pair second="35">
+      <exponent>1.75814600</exponent>
+      <factor>0.61530800</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="36">
+  <uss>8.53538400</uss>
+  <upp>-80.48432100</upp>
+  <zs>1.31224800</zs>
+  <zp>4.49137100</zp>
+  <bs>-2.72708800</bs>
+  <bp>-16.14295100</bp>
+  <gss>19.99985700</gss>
+  <gpp>9.17478400</gpp>
+  <gsp>1.17530400</gsp>
+  <gp2>14.92694800</gp2>
+  <hsp>0.29986700</hsp>
+  <eisol>-259.00170600</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>3.77045300</exponent>
+      <factor>5.12589700</factor>
+    </pair>
+    <pair second="2">
+      <exponent>1.99694300</exponent>
+      <factor>0.62770100</factor>
+    </pair>
+    <pair second="3">
+      <exponent>3.31456200</exponent>
+      <factor>8.75869700</factor>
+    </pair>
+    <pair second="4">
+      <exponent>3.25304800</exponent>
+      <factor>10.23779600</factor>
+    </pair>
+    <pair second="5">
+      <exponent>2.36316900</exponent>
+      <factor>2.94678100</factor>
+    </pair>
+    <pair second="6">
+      <exponent>2.07673800</exponent>
+      <factor>0.65262300</factor>
+    </pair>
+    <pair second="7">
+      <exponent>1.64405200</exponent>
+      <factor>0.19960600</factor>
+    </pair>
+    <pair second="8">
+      <exponent>0.29230000</exponent>
+      <factor>0.00673300</factor>
+    </pair>
+    <pair second="9">
+      <exponent>3.45232100</exponent>
+      <factor>4.13440700</factor>
+    </pair>
+    <pair second="10">
+      <exponent>2.81367900</exponent>
+      <factor>1.43372200</factor>
+    </pair>
+    <pair second="11">
+      <exponent>2.48059800</exponent>
+      <factor>8.35444800</factor>
+    </pair>
+    <pair second="12">
+      <exponent>1.39148700</exponent>
+      <factor>0.88843600</factor>
+    </pair>
+    <pair second="13">
+      <exponent>2.46713100</exponent>
+      <factor>5.09171600</factor>
+    </pair>
+    <pair second="14">
+      <exponent>1.76410000</exponent>
+      <factor>0.55425000</factor>
+    </pair>
+    <pair second="17">
+      <exponent>1.88497400</exponent>
+      <factor>0.52021700</factor>
+    </pair>
+    <pair second="18">
+      <exponent>1.99512500</exponent>
+      <factor>0.55487400</factor>
+    </pair>
+    <pair second="19">
+      <exponent>2.18248700</exponent>
+      <factor>8.60978200</factor>
+    </pair>
+    <pair second="20">
+      <exponent>1.30519700</exponent>
+      <factor>0.87889100</factor>
+    </pair>
+    <pair second="35">
+      <exponent>1.52900600</exponent>
+      <factor>0.30809800</factor>
+    </pair>
+    <pair second="36">
+      <exponent>1.13531900</exponent>
+      <factor>0.05209900</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="37">
+  <uss>-3.63650500</uss>
+  <upp>-2.50067100</upp>
+  <zs>5.51014500</zs>
+  <zp>1.33517000</zp>
+  <bs>9.99874400</bs>
+  <bp>1.34300400</bp>
+  <gss>6.68082400</gss>
+  <gpp>5.06887400</gpp>
+  <gsp>20.00109800</gsp>
+  <gp2>2.74786000</gp2>
+  <hsp>3.60283400</hsp>
+  <eheat>19.60000000</eheat>
+  <eisol>-3.63650500</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>2.44355600</exponent>
+      <factor>29.86163200</factor>
+    </pair>
+    <pair second="2">
+      <exponent>1.27074100</exponent>
+      <factor>1.86258500</factor>
+    </pair>
+    <pair second="5">
+      <exponent>5.53223900</exponent>
+      <factor>9.04049300</factor>
+    </pair>
+    <pair second="6">
+      <exponent>2.76583000</exponent>
+      <factor>29.97403100</factor>
+    </pair>
+    <pair second="7">
+      <exponent>0.76104700</exponent>
+      <factor>0.02463600</factor>
+    </pair>
+    <pair second="8">
+      <exponent>1.33490800</exponent>
+      <factor>1.12535000</factor>
+    </pair>
+    <pair second="9">
+      <exponent>3.63812200</exponent>
+      <factor>28.81527800</factor>
+    </pair>
+    <pair second="10">
+      <exponent>2.26759100</exponent>
+      <factor>7.73656300</factor>
+    </pair>
+    <pair second="13">
+      <exponent>0.79877400</exponent>
+      <factor>2.99245700</factor>
+    </pair>
+    <pair second="16">
+      <exponent>1.30318400</exponent>
+      <factor>0.96441100</factor>
+    </pair>
+    <pair second="17">
+      <exponent>2.27441100</exponent>
+      <factor>10.38448600</factor>
+    </pair>
+    <pair second="18">
+      <exponent>2.51097700</exponent>
+      <factor>18.43332900</factor>
+    </pair>
+    <pair second="35">
+      <exponent>1.79776600</exponent>
+      <factor>5.17621400</factor>
+    </pair>
+    <pair second="36">
+      <exponent>2.26875300</exponent>
+      <factor>15.30750300</factor>
+    </pair>
+    <pair second="37">
+      <exponent>1.18081800</exponent>
+      <factor>20.14761000</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="38">
+  <uss>-10.42767100</uss>
+  <upp>-9.94375100</upp>
+  <zs>2.19730300</zs>
+  <zp>1.73013700</zp>
+  <bs>-6.25310800</bs>
+  <bp>-9.84449800</bp>
+  <gss>4.60366400</gss>
+  <gpp>7.33462000</gpp>
+  <gsp>5.71606900</gsp>
+  <gp2>7.44308800</gp2>
+  <hsp>0.83152700</hsp>
+  <eheat>39.10000000</eheat>
+  <eisol>-16.25167800</eisol>
+  <grepa>-0.01294800</grepa>
+  <grepb>6.00012600</grepb>
+  <grepc>3.01196400</grepc>
+  <diatomic>
+    <pair second="1">
+      <exponent>2.10591400</exponent>
+      <factor>12.97331600</factor>
+    </pair>
+    <pair second="6">
+      <exponent>1.98668800</exponent>
+      <factor>6.65465700</factor>
+    </pair>
+    <pair second="7">
+      <exponent>2.18362900</exponent>
+      <factor>6.85386600</factor>
+    </pair>
+    <pair second="8">
+      <exponent>2.13839900</exponent>
+      <factor>3.56139600</factor>
+    </pair>
+    <pair second="9">
+      <exponent>3.05066600</exponent>
+      <factor>10.97170500</factor>
+    </pair>
+    <pair second="14">
+      <exponent>2.96978000</exponent>
+      <factor>2.76475000</factor>
+    </pair>
+    <pair second="15">
+      <exponent>2.78915000</exponent>
+      <factor>2.55210000</factor>
+    </pair>
+    <pair second="16">
+      <exponent>1.59810600</exponent>
+      <factor>3.12960300</factor>
+    </pair>
+    <pair second="17">
+      <exponent>1.85419000</exponent>
+      <factor>3.78395500</factor>
+    </pair>
+    <pair second="22">
+      <exponent>2.88003000</exponent>
+      <factor>2.81725000</factor>
+    </pair>
+    <pair second="35">
+      <exponent>1.52431600</exponent>
+      <factor>2.76656700</factor>
+    </pair>
+    <pair second="38">
+      <exponent>1.00004000</exponent>
+      <factor>5.37212000</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="39">
+  <uss>-14.24780900</uss>
+  <upp>-14.81714000</upp>
+  <udd>-16.39430200</udd>
+  <zs>0.59336800</zs>
+  <zp>1.49042200</zp>
+  <zd>1.65089300</zd>
+  <bs>0.34333600</bs>
+  <bp>-3.18080700</bp>
+  <bd>-4.50895700</bd>
+  <alpha>0.50072700</alpha>
+  <gss>4.04673328</gss>
+  <gpp>7.27875241</gpp>
+  <gsp>4.72627720</gsp>
+  <gp2>6.34328112</gp2>
+  <hsp>0.67922805</hsp>
+  <zsn>0.90261100</zsn>
+  <zpn>1.48440000</zpn>
+  <zdn>1.38423800</zdn>
+  <f0sd>4.97271600</f0sd>
+  <g2sd>5.01636400</g2sd>
+  <pcore>2.77370300</pcore>
+  <eheat>101.50000000</eheat>
+  <eisol>-31.90102752</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>1.18905300</exponent>
+      <factor>0.61239900</factor>
+    </pair>
+    <pair second="6">
+      <exponent>1.33609400</exponent>
+      <factor>0.50430600</factor>
+    </pair>
+    <pair second="7">
+      <exponent>1.77879600</exponent>
+      <factor>1.62790300</factor>
+    </pair>
+    <pair second="8">
+      <exponent>1.85103000</exponent>
+      <factor>1.74292200</factor>
+    </pair>
+    <pair second="9">
+      <exponent>2.64804600</exponent>
+      <factor>4.43380900</factor>
+    </pair>
+    <pair second="13">
+      <exponent>1.00350000</exponent>
+      <factor>0.50067000</factor>
+    </pair>
+    <pair second="14">
+      <exponent>2.01682000</exponent>
+      <factor>3.21903000</factor>
+    </pair>
+    <pair second="15">
+      <exponent>0.95445000</exponent>
+      <factor>0.54166000</factor>
+    </pair>
+    <pair second="16">
+      <exponent>0.97168800</exponent>
+      <factor>0.31822200</factor>
+    </pair>
+    <pair second="17">
+      <exponent>1.63015200</exponent>
+      <factor>1.15495900</factor>
+    </pair>
+    <pair second="35">
+      <exponent>1.40120800</exponent>
+      <factor>1.05431600</factor>
+    </pair>
+    <pair second="39">
+      <exponent>1.01268100</exponent>
+      <factor>1.69172500</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="40">
+  <uss>-20.00888400</uss>
+  <upp>-14.55969200</upp>
+  <udd>-21.30265700</udd>
+  <zs>1.69259000</zs>
+  <zp>1.69491600</zp>
+  <zd>1.56739200</zd>
+  <bs>9.55195200</bs>
+  <bp>-4.55191500</bp>
+  <bd>-3.21327400</bd>
+  <gss>5.33120797</gss>
+  <gpp>3.96738099</gpp>
+  <gsp>4.15057919</gsp>
+  <gp2>3.45748990</gp2>
+  <hsp>0.74367621</hsp>
+  <zsn>1.18910900</zsn>
+  <zpn>0.80909200</zpn>
+  <zdn>1.19024900</zdn>
+  <f0sd>5.01070400</f0sd>
+  <g2sd>2.94365200</g2sd>
+  <eheat>145.50000000</eheat>
+  <eisol>-52.56446812</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>1.37970300</exponent>
+      <factor>0.59373200</factor>
+    </pair>
+    <pair second="6">
+      <exponent>2.02942700</exponent>
+      <factor>1.99918200</factor>
+    </pair>
+    <pair second="7">
+      <exponent>1.70708300</exponent>
+      <factor>0.99504500</factor>
+    </pair>
+    <pair second="8">
+      <exponent>1.70957000</exponent>
+      <factor>1.05752500</factor>
+    </pair>
+    <pair second="9">
+      <exponent>1.90092500</exponent>
+      <factor>0.86114200</factor>
+    </pair>
+    <pair second="13">
+      <exponent>1.27062000</exponent>
+      <factor>0.87406000</factor>
+    </pair>
+    <pair second="14">
+      <exponent>1.75083300</exponent>
+      <factor>1.72334300</factor>
+    </pair>
+    <pair second="15">
+      <exponent>1.09185800</exponent>
+      <factor>0.74837600</factor>
+    </pair>
+    <pair second="16">
+      <exponent>2.12976100</exponent>
+      <factor>2.42932400</factor>
+    </pair>
+    <pair second="17">
+      <exponent>1.32883500</exponent>
+      <factor>0.44309900</factor>
+    </pair>
+    <pair second="35">
+      <exponent>1.44686800</exponent>
+      <factor>0.85890900</factor>
+    </pair>
+    <pair second="40">
+      <exponent>3.86596800</exponent>
+      <factor>3.07777300</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="41">
+  <uss>-31.26929800</uss>
+  <upp>-20.15127700</upp>
+  <udd>-35.89311600</udd>
+  <zs>2.35556200</zs>
+  <zp>1.38690700</zp>
+  <zd>1.97732400</zd>
+  <bs>-12.04524400</bs>
+  <bp>1.46576200</bp>
+  <bd>-5.92016000</bd>
+  <alpha>0.84397400</alpha>
+  <gss>6.68359218</gss>
+  <gpp>4.37764686</gpp>
+  <gsp>4.68533917</gsp>
+  <gp2>3.81502806</gp2>
+  <hsp>0.65067949</hsp>
+  <zsn>1.49075400</zsn>
+  <zpn>0.89276000</zpn>
+  <zdn>1.44383700</zdn>
+  <f0sd>6.55067400</f0sd>
+  <g2sd>1.06557700</g2sd>
+  <eheat>172.40000000</eheat>
+  <eisol>-105.29331354</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>2.50591200</exponent>
+      <factor>3.60377900</factor>
+    </pair>
+    <pair second="6">
+      <exponent>2.62101200</exponent>
+      <factor>4.57548100</factor>
+    </pair>
+    <pair second="7">
+      <exponent>2.02386300</exponent>
+      <factor>1.21358700</factor>
+    </pair>
+    <pair second="8">
+      <exponent>2.04948900</exponent>
+      <factor>1.18471900</factor>
+    </pair>
+    <pair second="9">
+      <exponent>3.00315700</exponent>
+      <factor>3.66368200</factor>
+    </pair>
+    <pair second="11">
+      <exponent>2.55101000</exponent>
+      <factor>8.27602000</factor>
+    </pair>
+    <pair second="15">
+      <exponent>2.22160800</exponent>
+      <factor>6.20150700</factor>
+    </pair>
+    <pair second="16">
+      <exponent>2.24948200</exponent>
+      <factor>2.46002000</factor>
+    </pair>
+    <pair second="17">
+      <exponent>2.21527500</exponent>
+      <factor>1.89155700</factor>
+    </pair>
+    <pair second="19">
+      <exponent>4.52136000</exponent>
+      <factor>2.02659000</factor>
+    </pair>
+    <pair second="35">
+      <exponent>2.00667800</exponent>
+      <factor>1.92126900</factor>
+    </pair>
+    <pair second="41">
+      <exponent>1.72794100</exponent>
+      <factor>2.12238800</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="42">
+  <uss>-53.46772800</uss>
+  <upp>-35.29195100</upp>
+  <udd>-55.83697700</udd>
+  <zs>1.06042900</zs>
+  <zp>1.35041200</zp>
+  <zd>1.82715200</zd>
+  <bs>-0.18934400</bs>
+  <bp>7.01776200</bp>
+  <bd>-10.94112600</bd>
+  <gss>8.57665210</gss>
+  <gpp>6.64450947</gpp>
+  <gsp>6.88829273</gsp>
+  <gp2>5.79055161</gp2>
+  <hsp>1.31736764</hsp>
+  <zsn>1.91299500</zsn>
+  <zpn>1.35505500</zpn>
+  <zdn>1.87623100</zdn>
+  <f0sd>10.00060800</f0sd>
+  <g2sd>1.21675200</g2sd>
+  <eheat>157.30000000</eheat>
+  <eisol>-188.14215466</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>2.03574800</exponent>
+      <factor>0.93468600</factor>
+    </pair>
+    <pair second="6">
+      <exponent>2.19867200</exponent>
+      <factor>1.19074200</factor>
+    </pair>
+    <pair second="7">
+      <exponent>1.86947500</exponent>
+      <factor>0.60826800</factor>
+    </pair>
+    <pair second="8">
+      <exponent>1.75542400</exponent>
+      <factor>0.51126700</factor>
+    </pair>
+    <pair second="9">
+      <exponent>2.20259300</exponent>
+      <factor>0.61042900</factor>
+    </pair>
+    <pair second="11">
+      <exponent>2.44077000</exponent>
+      <factor>8.28655000</factor>
+    </pair>
+    <pair second="15">
+      <exponent>1.85044100</exponent>
+      <factor>1.52284600</factor>
+    </pair>
+    <pair second="16">
+      <exponent>1.93965800</exponent>
+      <factor>0.83042800</factor>
+    </pair>
+    <pair second="17">
+      <exponent>1.78336200</exponent>
+      <factor>0.47432500</factor>
+    </pair>
+    <pair second="19">
+      <exponent>3.93942000</exponent>
+      <factor>2.14239000</factor>
+    </pair>
+    <pair second="24">
+      <exponent>2.67461600</exponent>
+      <factor>1.74194300</factor>
+    </pair>
+    <pair second="35">
+      <exponent>1.28333400</exponent>
+      <factor>0.22591800</factor>
+    </pair>
+    <pair second="42">
+      <exponent>2.03425400</exponent>
+      <factor>0.62646200</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="43">
+  <uss>-41.85029200</uss>
+  <upp>-34.91029300</upp>
+  <udd>-45.53041200</udd>
+  <zs>1.95624500</zs>
+  <zp>6.00629900</zp>
+  <zd>1.76736000</zd>
+  <bs>-2.79102400</bs>
+  <bp>-8.08669700</bp>
+  <bd>-5.72433500</bd>
+  <gss>6.32617395</gss>
+  <gpp>5.59642600</gpp>
+  <gsp>5.58713806</gsp>
+  <gp2>4.87716869</gp2>
+  <hsp>1.25898912</hsp>
+  <zsn>1.41103300</zsn>
+  <zpn>1.14131300</zpn>
+  <zdn>1.15931200</zdn>
+  <f0sd>5.43488600</f0sd>
+  <g2sd>1.10687500</g2sd>
+  <eheat>162.00000000</eheat>
+  <eisol>-192.63708829</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>2.83034500</exponent>
+      <factor>6.31033400</factor>
+    </pair>
+    <pair second="6">
+      <exponent>3.19832600</exponent>
+      <factor>3.97243900</factor>
+    </pair>
+    <pair second="7">
+      <exponent>2.31541700</exponent>
+      <factor>0.72713000</factor>
+    </pair>
+    <pair second="8">
+      <exponent>2.40519000</exponent>
+      <factor>1.02461600</factor>
+    </pair>
+    <pair second="9">
+      <exponent>3.60481500</exponent>
+      <factor>5.81178400</factor>
+    </pair>
+    <pair second="16">
+      <exponent>2.46340100</exponent>
+      <factor>1.49650200</factor>
+    </pair>
+    <pair second="17">
+      <exponent>2.57204300</exponent>
+      <factor>1.65158300</factor>
+    </pair>
+    <pair second="32">
+      <exponent>2.85282000</exponent>
+      <factor>2.15206000</factor>
+    </pair>
+    <pair second="34">
+      <exponent>2.52366000</exponent>
+      <factor>2.20262000</factor>
+    </pair>
+    <pair second="35">
+      <exponent>2.82826400</exponent>
+      <factor>3.82013000</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="44">
+  <uss>-44.90152100</uss>
+  <upp>-41.42440900</upp>
+  <udd>-37.93451400</udd>
+  <zs>1.45919500</zs>
+  <zp>5.53720100</zp>
+  <zd>2.09316400</zd>
+  <bs>-12.85950800</bs>
+  <bp>-8.47551800</bp>
+  <bd>-3.83079700</bd>
+  <gss>4.41364279</gss>
+  <gpp>22.49044761</gpp>
+  <gsp>5.35699582</gsp>
+  <gp2>19.59995666</gp2>
+  <hsp>0.00805809</hsp>
+  <zsn>0.98444900</zsn>
+  <zpn>4.58661300</zpn>
+  <zdn>0.76533200</zdn>
+  <f0sd>5.91740400</f0sd>
+  <g2sd>5.85973800</g2sd>
+  <eheat>155.50000000</eheat>
+  <eisol>-190.22501963</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>2.89289900</exponent>
+      <factor>7.13797600</factor>
+    </pair>
+    <pair second="6">
+      <exponent>2.78483300</exponent>
+      <factor>1.13493600</factor>
+    </pair>
+    <pair second="7">
+      <exponent>3.05550400</exponent>
+      <factor>2.33409400</factor>
+    </pair>
+    <pair second="8">
+      <exponent>3.13494000</exponent>
+      <factor>2.97627900</factor>
+    </pair>
+    <pair second="9">
+      <exponent>3.87871100</exponent>
+      <factor>6.94712800</factor>
+    </pair>
+    <pair second="14">
+      <exponent>2.77591000</exponent>
+      <factor>0.84943000</factor>
+    </pair>
+    <pair second="15">
+      <exponent>0.29891600</exponent>
+      <factor>0.05697400</factor>
+    </pair>
+    <pair second="16">
+      <exponent>2.50807600</exponent>
+      <factor>1.00668300</factor>
+    </pair>
+    <pair second="17">
+      <exponent>1.75988300</exponent>
+      <factor>0.12658600</factor>
+    </pair>
+    <pair second="32">
+      <exponent>2.85232000</exponent>
+      <factor>2.15156000</factor>
+    </pair>
+    <pair second="34">
+      <exponent>2.52316000</exponent>
+      <factor>2.20212000</factor>
+    </pair>
+    <pair second="35">
+      <exponent>2.58473500</exponent>
+      <factor>0.65988100</factor>
+    </pair>
+    <pair second="44">
+      <exponent>0.57205600</exponent>
+      <factor>0.09780500</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="45">
+  <uss>-20.51375600</uss>
+  <upp>-40.04543100</upp>
+  <udd>-35.81849200</udd>
+  <zs>1.32491900</zs>
+  <zp>4.30611100</zp>
+  <zd>2.90140600</zd>
+  <bs>-8.22214100</bs>
+  <bp>-15.55669100</bp>
+  <bd>-13.39618200</bd>
+  <gss>3.63117927</gss>
+  <gpp>33.82559912</gpp>
+  <gsp>4.40781970</gsp>
+  <gp2>29.47830511</gp2>
+  <hsp>0.00009171</hsp>
+  <zsn>0.80992300</zsn>
+  <zpn>6.89825900</zpn>
+  <zdn>0.64313400</zdn>
+  <f0sd>1.77549700</f0sd>
+  <g2sd>1.85157100</g2sd>
+  <eheat>133.00000000</eheat>
+  <eisol>-199.42781547</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>3.10416500</exponent>
+      <factor>2.30610700</factor>
+    </pair>
+    <pair second="6">
+      <exponent>3.41599100</exponent>
+      <factor>3.48807900</factor>
+    </pair>
+    <pair second="7">
+      <exponent>3.58546200</exponent>
+      <factor>4.00094700</factor>
+    </pair>
+    <pair second="8">
+      <exponent>3.92783000</exponent>
+      <factor>10.29867600</factor>
+    </pair>
+    <pair second="9">
+      <exponent>4.05165400</exponent>
+      <factor>9.06538400</factor>
+    </pair>
+    <pair second="14">
+      <exponent>2.77649000</exponent>
+      <factor>0.85001000</factor>
+    </pair>
+    <pair second="15">
+      <exponent>2.33460700</exponent>
+      <factor>1.03814100</factor>
+    </pair>
+    <pair second="16">
+      <exponent>3.15400600</exponent>
+      <factor>4.81641000</factor>
+    </pair>
+    <pair second="17">
+      <exponent>3.30013000</exponent>
+      <factor>3.58686500</factor>
+    </pair>
+    <pair second="32">
+      <exponent>2.85290000</exponent>
+      <factor>2.15214000</factor>
+    </pair>
+    <pair second="34">
+      <exponent>2.52374000</exponent>
+      <factor>2.20270000</factor>
+    </pair>
+    <pair second="35">
+      <exponent>2.92808200</exponent>
+      <factor>1.51014900</factor>
+    </pair>
+    <pair second="45">
+      <exponent>2.49732800</exponent>
+      <factor>2.07011400</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="46">
+  <uss>-76.14019600</uss>
+  <upp>-21.07336200</upp>
+  <udd>-85.32530100</udd>
+  <zs>1.65850300</zs>
+  <zp>1.15671800</zp>
+  <zd>2.21986100</zd>
+  <bs>-8.03824500</bs>
+  <bp>0.74003700</bp>
+  <bd>-2.39449800</bd>
+  <gss>8.04353534</gss>
+  <gpp>30.19955553</gpp>
+  <gsp>9.75504166</gsp>
+  <gp2>26.31828364</gp2>
+  <hsp>0.08612136</hsp>
+  <zsn>1.79408500</zsn>
+  <zpn>6.15877800</zpn>
+  <zdn>1.63091300</zdn>
+  <f0sd>8.00444700</f0sd>
+  <g2sd>2.61314800</g2sd>
+  <eheat>90.00000000</eheat>
+  <eisol>-463.93571323</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>2.18376100</exponent>
+      <factor>0.44326900</factor>
+    </pair>
+    <pair second="6">
+      <exponent>4.77719200</exponent>
+      <factor>9.85371500</factor>
+    </pair>
+    <pair second="7">
+      <exponent>2.32804600</exponent>
+      <factor>0.24970300</factor>
+    </pair>
+    <pair second="8">
+      <exponent>2.15486700</exponent>
+      <factor>0.21640300</factor>
+    </pair>
+    <pair second="9">
+      <exponent>4.23731200</exponent>
+      <factor>6.94531200</factor>
+    </pair>
+    <pair second="13">
+      <exponent>1.57272000</exponent>
+      <factor>1.05729000</factor>
+    </pair>
+    <pair second="14">
+      <exponent>2.94820000</exponent>
+      <factor>2.22510400</factor>
+    </pair>
+    <pair second="15">
+      <exponent>0.80363000</exponent>
+      <factor>0.04501700</factor>
+    </pair>
+    <pair second="16">
+      <exponent>2.17780100</exponent>
+      <factor>0.25522900</factor>
+    </pair>
+    <pair second="17">
+      <exponent>3.87124300</exponent>
+      <factor>2.96989100</factor>
+    </pair>
+    <pair second="35">
+      <exponent>5.99487900</exponent>
+      <factor>4.63805100</factor>
+    </pair>
+    <pair second="46">
+      <exponent>1.06437500</exponent>
+      <factor>0.05195600</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="47">
+  <uss>-25.48413700</uss>
+  <upp>-36.11602300</upp>
+  <udd>-35.66827200</udd>
+  <zs>1.99400400</zs>
+  <zp>0.68181700</zp>
+  <zd>6.00732800</zd>
+  <bs>-6.12962300</bs>
+  <bp>1.00411500</bp>
+  <bd>-69.23834700</bd>
+  <gss>3.11824213</gss>
+  <gpp>23.19329540</gpp>
+  <gsp>3.78515183</gsp>
+  <gp2>20.21247387</gp2>
+  <hsp>0.00043152</hsp>
+  <zsn>0.69551400</zsn>
+  <zpn>4.72994900</zpn>
+  <zdn>0.50652200</zdn>
+  <f0sd>1.93832700</f0sd>
+  <g2sd>1.07190100</g2sd>
+  <eheat>68.10000000</eheat>
+  <eisol>-242.94298329</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>2.89593600</exponent>
+      <factor>1.99516800</factor>
+    </pair>
+    <pair second="6">
+      <exponent>4.40433600</exponent>
+      <factor>11.33545600</factor>
+    </pair>
+    <pair second="7">
+      <exponent>4.65987100</exponent>
+      <factor>19.80371000</factor>
+    </pair>
+    <pair second="8">
+      <exponent>1.89387400</exponent>
+      <factor>0.16566100</factor>
+    </pair>
+    <pair second="9">
+      <exponent>4.62842300</exponent>
+      <factor>12.69588400</factor>
+    </pair>
+    <pair second="13">
+      <exponent>1.92880000</exponent>
+      <factor>0.89651400</factor>
+    </pair>
+    <pair second="15">
+      <exponent>6.00000600</exponent>
+      <factor>0.04993200</factor>
+    </pair>
+    <pair second="16">
+      <exponent>3.65312100</exponent>
+      <factor>11.18802200</factor>
+    </pair>
+    <pair second="17">
+      <exponent>4.44117600</exponent>
+      <factor>23.76545900</factor>
+    </pair>
+    <pair second="35">
+      <exponent>3.67749100</exponent>
+      <factor>1.71436900</factor>
+    </pair>
+    <pair second="47">
+      <exponent>2.12764500</exponent>
+      <factor>0.55774200</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="48">
+  <uss>-14.64579200</uss>
+  <upp>-9.31866400</upp>
+  <zs>1.38410800</zs>
+  <zp>1.95741300</zp>
+  <bs>-11.61318300</bs>
+  <bp>1.66317800</bp>
+  <gss>6.67728400</gss>
+  <gpp>18.72984300</gpp>
+  <gsp>5.95337300</gsp>
+  <gp2>9.91745200</gp2>
+  <hsp>0.82519200</hsp>
+  <eheat>26.72000000</eheat>
+  <eisol>-22.61430000</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>2.62874800</exponent>
+      <factor>11.91420100</factor>
+    </pair>
+    <pair second="6">
+      <exponent>1.42567800</exponent>
+      <factor>0.60344100</factor>
+    </pair>
+    <pair second="7">
+      <exponent>0.97042300</exponent>
+      <factor>0.18066300</factor>
+    </pair>
+    <pair second="8">
+      <exponent>1.69667300</exponent>
+      <factor>0.92614600</factor>
+    </pair>
+    <pair second="9">
+      <exponent>2.31213500</exponent>
+      <factor>1.35366500</factor>
+    </pair>
+    <pair second="14">
+      <exponent>1.37122500</exponent>
+      <factor>2.25334600</factor>
+    </pair>
+    <pair second="16">
+      <exponent>1.18220200</exponent>
+      <factor>0.36138900</factor>
+    </pair>
+    <pair second="17">
+      <exponent>0.94354700</exponent>
+      <factor>0.14042400</factor>
+    </pair>
+    <pair second="35">
+      <exponent>1.00145100</exponent>
+      <factor>0.27226700</factor>
+    </pair>
+    <pair second="48">
+      <exponent>1.56404400</exponent>
+      <factor>18.61799900</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="49">
+  <uss>-28.33924600</uss>
+  <upp>-23.37387500</upp>
+  <zs>2.02308700</zs>
+  <zp>2.10661800</zp>
+  <bs>-1.98237600</bs>
+  <bp>-3.33029400</bp>
+  <gss>9.90609100</gss>
+  <gpp>4.82600600</gpp>
+  <gsp>10.52006000</gsp>
+  <gp2>7.90656300</gp2>
+  <hsp>3.50029900</hsp>
+  <eheat>58.00000000</eheat>
+  <eisol>-52.60645500</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>3.06414400</exponent>
+      <factor>14.97529300</factor>
+    </pair>
+    <pair second="6">
+      <exponent>2.18927200</exponent>
+      <factor>2.18738500</factor>
+    </pair>
+    <pair second="7">
+      <exponent>2.46986800</exponent>
+      <factor>3.36999300</factor>
+    </pair>
+    <pair second="8">
+      <exponent>2.66209500</exponent>
+      <factor>4.12858300</factor>
+    </pair>
+    <pair second="9">
+      <exponent>2.94879700</exponent>
+      <factor>3.70101600</factor>
+    </pair>
+    <pair second="16">
+      <exponent>2.54213100</exponent>
+      <factor>6.34110500</factor>
+    </pair>
+    <pair second="17">
+      <exponent>2.23340500</exponent>
+      <factor>2.38855200</factor>
+    </pair>
+    <pair second="31">
+      <exponent>1.62887000</exponent>
+      <factor>2.42198700</factor>
+    </pair>
+    <pair second="33">
+      <exponent>2.29955200</exponent>
+      <factor>6.20835000</factor>
+    </pair>
+    <pair second="34">
+      <exponent>1.90657200</exponent>
+      <factor>2.31932300</factor>
+    </pair>
+    <pair second="35">
+      <exponent>2.25795700</exponent>
+      <factor>3.72859800</factor>
+    </pair>
+    <pair second="49">
+      <exponent>2.07324100</exponent>
+      <factor>8.06349100</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="50">
+  <uss>-29.88821700</uss>
+  <upp>-22.15695400</upp>
+  <zs>2.38394100</zs>
+  <zp>2.05790800</zp>
+  <bs>-8.62108700</bs>
+  <bp>-4.98975200</bp>
+  <gss>8.26965500</gss>
+  <gpp>6.58487400</gpp>
+  <gsp>5.01334900</gsp>
+  <gp2>5.85515900</gp2>
+  <hsp>0.53121200</hsp>
+  <eheat>72.20000000</eheat>
+  <eisol>-71.33941350</eisol>
+  <grepa>-1.00458700</grepa>
+  <grepb>4.70625200</grepb>
+  <grepc>1.18021800</grepc>
+  <diatomic>
+    <pair second="1">
+      <exponent>2.64891000</exponent>
+      <factor>6.53516200</factor>
+    </pair>
+    <pair second="6">
+      <exponent>2.44053800</exponent>
+      <factor>3.37435500</factor>
+    </pair>
+    <pair second="7">
+      <exponent>2.08558900</exponent>
+      <factor>1.39190000</factor>
+    </pair>
+    <pair second="8">
+      <exponent>2.72726000</exponent>
+      <factor>4.37401700</factor>
+    </pair>
+    <pair second="9">
+      <exponent>3.72428600</exponent>
+      <factor>18.59866400</factor>
+    </pair>
+    <pair second="16">
+      <exponent>2.13154200</exponent>
+      <factor>2.31487000</factor>
+    </pair>
+    <pair second="17">
+      <exponent>1.77152200</exponent>
+      <factor>0.80778200</factor>
+    </pair>
+    <pair second="32">
+      <exponent>2.52463300</exponent>
+      <factor>12.34341100</factor>
+    </pair>
+    <pair second="34">
+      <exponent>2.12737700</exponent>
+      <factor>3.06188500</factor>
+    </pair>
+    <pair second="35">
+      <exponent>1.53508900</exponent>
+      <factor>0.66879800</factor>
+    </pair>
+    <pair second="50">
+      <exponent>0.92100000</exponent>
+      <factor>0.28700000</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="51">
+  <uss>-41.68887900</uss>
+  <upp>-39.54118000</upp>
+  <udd>-6.58166300</udd>
+  <zs>2.39117800</zs>
+  <zp>1.77300600</zp>
+  <zd>2.46559000</zd>
+  <bs>-7.47232200</bs>
+  <bp>-5.94075000</bp>
+  <bd>-3.97910800</bd>
+  <gss>10.58883200</gss>
+  <gpp>9.28160900</gpp>
+  <gsp>7.31002300</gsp>
+  <gp2>8.95408100</gp2>
+  <hsp>0.77911200</hsp>
+  <zsn>5.99359100</zsn>
+  <zpn>6.14508600</zpn>
+  <zdn>5.70403100</zdn>
+  <f0sd>26.18801175</f0sd>
+  <g2sd>15.25484225</g2sd>
+  <eheat>63.20000000</eheat>
+  <eisol>-123.51871300</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>1.57127200</exponent>
+      <factor>0.79534300</factor>
+    </pair>
+    <pair second="6">
+      <exponent>1.69620600</exponent>
+      <factor>0.57921200</factor>
+    </pair>
+    <pair second="7">
+      <exponent>0.67611500</exponent>
+      <factor>0.08206500</factor>
+    </pair>
+    <pair second="8">
+      <exponent>1.84638400</exponent>
+      <factor>0.63423400</factor>
+    </pair>
+    <pair second="9">
+      <exponent>2.18292200</exponent>
+      <factor>0.65027700</factor>
+    </pair>
+    <pair second="13">
+      <exponent>1.42264100</exponent>
+      <factor>1.61669000</factor>
+    </pair>
+    <pair second="14">
+      <exponent>2.68659000</exponent>
+      <factor>8.71374900</factor>
+    </pair>
+    <pair second="16">
+      <exponent>1.41883700</exponent>
+      <factor>0.39696900</factor>
+    </pair>
+    <pair second="17">
+      <exponent>1.11728700</exponent>
+      <factor>0.15647500</factor>
+    </pair>
+    <pair second="25">
+      <exponent>2.40032000</exponent>
+      <factor>2.23671000</factor>
+    </pair>
+    <pair second="27">
+      <exponent>2.20463000</exponent>
+      <factor>2.27605000</factor>
+    </pair>
+    <pair second="35">
+      <exponent>1.06391600</exponent>
+      <factor>0.19804400</factor>
+    </pair>
+    <pair second="43">
+      <exponent>2.20485000</exponent>
+      <factor>2.27626000</factor>
+    </pair>
+    <pair second="44">
+      <exponent>2.20435000</exponent>
+      <factor>2.27576000</factor>
+    </pair>
+    <pair second="45">
+      <exponent>2.20493000</exponent>
+      <factor>2.27634000</factor>
+    </pair>
+    <pair second="49">
+      <exponent>2.14193300</exponent>
+      <factor>6.66080100</factor>
+    </pair>
+    <pair second="51">
+      <exponent>1.34853500</exponent>
+      <factor>0.72488500</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="52">
+  <uss>-114.73331600</uss>
+  <upp>-50.09638900</upp>
+  <zs>2.76986200</zs>
+  <zp>1.73131900</zp>
+  <bs>-70.00106200</bs>
+  <bp>-6.15164200</bp>
+  <gss>7.03062600</gss>
+  <gpp>7.88347900</gpp>
+  <gsp>12.60138900</gsp>
+  <gp2>6.97316300</gp2>
+  <hsp>5.00082600</hsp>
+  <eheat>47.00000000</eheat>
+  <eisol>-300.62993400</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>2.03913000</exponent>
+      <factor>1.80767900</factor>
+    </pair>
+    <pair second="6">
+      <exponent>1.99281600</exponent>
+      <factor>0.97049400</factor>
+    </pair>
+    <pair second="7">
+      <exponent>1.72226900</exponent>
+      <factor>0.35859300</factor>
+    </pair>
+    <pair second="8">
+      <exponent>1.85306400</exponent>
+      <factor>0.38292600</factor>
+    </pair>
+    <pair second="9">
+      <exponent>1.99857600</exponent>
+      <factor>0.20082200</factor>
+    </pair>
+    <pair second="13">
+      <exponent>1.38754100</exponent>
+      <factor>2.10681200</factor>
+    </pair>
+    <pair second="15">
+      <exponent>1.45371800</exponent>
+      <factor>1.10928900</factor>
+    </pair>
+    <pair second="16">
+      <exponent>1.83017000</exponent>
+      <factor>0.94392500</factor>
+    </pair>
+    <pair second="17">
+      <exponent>1.30026000</exponent>
+      <factor>0.28547800</factor>
+    </pair>
+    <pair second="30">
+      <exponent>1.21892900</exponent>
+      <factor>1.75607000</factor>
+    </pair>
+    <pair second="32">
+      <exponent>2.34237200</exponent>
+      <factor>7.01904900</factor>
+    </pair>
+    <pair second="33">
+      <exponent>1.18925300</exponent>
+      <factor>0.68577400</factor>
+    </pair>
+    <pair second="34">
+      <exponent>1.56600800</exponent>
+      <factor>1.18782600</factor>
+    </pair>
+    <pair second="35">
+      <exponent>1.25094000</exponent>
+      <factor>0.39420200</factor>
+    </pair>
+    <pair second="48">
+      <exponent>1.30726200</exponent>
+      <factor>1.08591900</factor>
+    </pair>
+    <pair second="49">
+      <exponent>1.54098800</exponent>
+      <factor>2.03958200</factor>
+    </pair>
+    <pair second="50">
+      <exponent>1.76394100</exponent>
+      <factor>2.95197600</factor>
+    </pair>
+    <pair second="52">
+      <exponent>1.16497800</exponent>
+      <factor>0.64248600</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="53">
+  <uss>-59.97323200</uss>
+  <upp>-56.45983500</upp>
+  <udd>-28.82260300</udd>
+  <zs>4.49865300</zs>
+  <zp>1.91707200</zp>
+  <zd>1.87517500</zd>
+  <bs>-30.52248100</bs>
+  <bp>-5.94212000</bp>
+  <bd>-7.67610700</bd>
+  <gss>7.23475900</gss>
+  <gpp>9.87746600</gpp>
+  <gsp>9.15440600</gsp>
+  <gp2>8.03591600</gp2>
+  <hsp>5.00421500</hsp>
+  <zsn>9.13524400</zsn>
+  <zpn>6.88819100</zpn>
+  <zdn>3.79152300</zdn>
+  <f0sd>20.49500247</f0sd>
+  <g2sd>2.16014129</g2sd>
+  <eheat>25.51700000</eheat>
+  <eisol>-248.12873500</eisol>
+  <grepa>-0.03551900</grepa>
+  <grepb>1.74438900</grepb>
+  <grepc>1.22384400</grepc>
+  <diatomic>
+    <pair second="1">
+      <exponent>2.13991300</exponent>
+      <factor>0.98189800</factor>
+    </pair>
+    <pair second="2">
+      <exponent>2.17298400</exponent>
+      <factor>1.63072100</factor>
+    </pair>
+    <pair second="3">
+      <exponent>2.12125100</exponent>
+      <factor>4.16859900</factor>
+    </pair>
+    <pair second="4">
+      <exponent>2.28802300</exponent>
+      <factor>2.35189800</factor>
+    </pair>
+    <pair second="5">
+      <exponent>2.66760500</exponent>
+      <factor>3.16138500</factor>
+    </pair>
+    <pair second="6">
+      <exponent>2.06871000</exponent>
+      <factor>0.81015600</factor>
+    </pair>
+    <pair second="7">
+      <exponent>1.67751800</exponent>
+      <factor>0.26490300</factor>
+    </pair>
+    <pair second="8">
+      <exponent>2.28891900</exponent>
+      <factor>0.86620400</factor>
+    </pair>
+    <pair second="9">
+      <exponent>2.20358000</exponent>
+      <factor>0.39242500</factor>
+    </pair>
+    <pair second="10">
+      <exponent>2.41441500</exponent>
+      <factor>1.50356800</factor>
+    </pair>
+    <pair second="11">
+      <exponent>1.40309000</exponent>
+      <factor>1.98611200</factor>
+    </pair>
+    <pair second="12">
+      <exponent>2.04513700</exponent>
+      <factor>3.27691400</factor>
+    </pair>
+    <pair second="13">
+      <exponent>1.81606800</exponent>
+      <factor>2.92908000</factor>
+    </pair>
+    <pair second="14">
+      <exponent>1.55957900</exponent>
+      <factor>0.70029900</factor>
+    </pair>
+    <pair second="15">
+      <exponent>2.13159300</exponent>
+      <factor>3.04720700</factor>
+    </pair>
+    <pair second="16">
+      <exponent>1.85511000</exponent>
+      <factor>0.70992900</factor>
+    </pair>
+    <pair second="17">
+      <exponent>1.57416100</exponent>
+      <factor>0.31047400</factor>
+    </pair>
+    <pair second="18">
+      <exponent>1.57658700</exponent>
+      <factor>0.30536700</factor>
+    </pair>
+    <pair second="19">
+      <exponent>1.53971400</exponent>
+      <factor>4.82435300</factor>
+    </pair>
+    <pair second="20">
+      <exponent>2.19649000</exponent>
+      <factor>7.68992100</factor>
+    </pair>
+    <pair second="21">
+      <exponent>1.81488400</exponent>
+      <factor>3.11428200</factor>
+    </pair>
+    <pair second="22">
+      <exponent>1.93346900</exponent>
+      <factor>2.42674700</factor>
+    </pair>
+    <pair second="23">
+      <exponent>2.68352000</exponent>
+      <factor>6.19811200</factor>
+    </pair>
+    <pair second="24">
+      <exponent>2.63422400</exponent>
+      <factor>2.59859000</factor>
+    </pair>
+    <pair second="25">
+      <exponent>2.26660000</exponent>
+      <factor>1.19341000</factor>
+    </pair>
+    <pair second="26">
+      <exponent>1.91282900</exponent>
+      <factor>0.53262200</factor>
+    </pair>
+    <pair second="27">
+      <exponent>3.23520400</exponent>
+      <factor>1.10523900</factor>
+    </pair>
+    <pair second="28">
+      <exponent>1.08534300</exponent>
+      <factor>0.01745900</factor>
+    </pair>
+    <pair second="29">
+      <exponent>0.83430500</exponent>
+      <factor>0.00678100</factor>
+    </pair>
+    <pair second="30">
+      <exponent>1.39476200</exponent>
+      <factor>0.97660700</factor>
+    </pair>
+    <pair second="31">
+      <exponent>1.67172900</exponent>
+      <factor>1.25216800</factor>
+    </pair>
+    <pair second="32">
+      <exponent>1.81742500</exponent>
+      <factor>1.32326700</factor>
+    </pair>
+    <pair second="33">
+      <exponent>1.24526200</exponent>
+      <factor>0.31082400</factor>
+    </pair>
+    <pair second="35">
+      <exponent>1.57937600</exponent>
+      <factor>0.48305400</factor>
+    </pair>
+    <pair second="36">
+      <exponent>1.23857400</exponent>
+      <factor>0.20113600</factor>
+    </pair>
+    <pair second="37">
+      <exponent>1.43267500</exponent>
+      <factor>4.09244600</factor>
+    </pair>
+    <pair second="38">
+      <exponent>1.26204200</exponent>
+      <factor>2.10394100</factor>
+    </pair>
+    <pair second="39">
+      <exponent>1.27911000</exponent>
+      <factor>1.02140200</factor>
+    </pair>
+    <pair second="40">
+      <exponent>1.99518200</exponent>
+      <factor>4.51394300</factor>
+    </pair>
+    <pair second="41">
+      <exponent>1.96725100</exponent>
+      <factor>2.39929800</factor>
+    </pair>
+    <pair second="42">
+      <exponent>0.94846100</exponent>
+      <factor>0.12469500</factor>
+    </pair>
+    <pair second="43">
+      <exponent>1.29231200</exponent>
+      <factor>0.11059400</factor>
+    </pair>
+    <pair second="44">
+      <exponent>3.95320300</exponent>
+      <factor>7.83771000</factor>
+    </pair>
+    <pair second="45">
+      <exponent>3.70817000</exponent>
+      <factor>2.35794400</factor>
+    </pair>
+    <pair second="46">
+      <exponent>5.14454400</exponent>
+      <factor>3.52201700</factor>
+    </pair>
+    <pair second="47">
+      <exponent>2.59316100</exponent>
+      <factor>0.04890400</factor>
+    </pair>
+    <pair second="48">
+      <exponent>0.99623800</exponent>
+      <factor>0.39678400</factor>
+    </pair>
+    <pair second="49">
+      <exponent>2.35175800</exponent>
+      <factor>5.94782100</factor>
+    </pair>
+    <pair second="50">
+      <exponent>1.85563300</exponent>
+      <factor>1.78316300</factor>
+    </pair>
+    <pair second="51">
+      <exponent>1.15531500</exponent>
+      <factor>0.31819000</factor>
+    </pair>
+    <pair second="52">
+      <exponent>1.49395100</exponent>
+      <factor>1.10111600</factor>
+    </pair>
+    <pair second="53">
+      <exponent>1.51992500</exponent>
+      <factor>0.51054200</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="54">
+  <uss>-18.27022700</uss>
+  <upp>-167.16306300</upp>
+  <zs>2.75978700</zs>
+  <zp>1.97744600</zp>
+  <bs>-3.98062200</bs>
+  <bp>-38.82279200</bp>
+  <gss>20.00025200</gss>
+  <gpp>2.30578700</gpp>
+  <gsp>4.17590200</gsp>
+  <gp2>4.06322000</gp2>
+  <hsp>4.41884300</hsp>
+  <eisol>-942.03007800</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>1.35686100</exponent>
+      <factor>0.70101600</factor>
+    </pair>
+    <pair second="2">
+      <exponent>2.49783200</exponent>
+      <factor>2.59947100</factor>
+    </pair>
+    <pair second="3">
+      <exponent>2.46689500</exponent>
+      <factor>4.58208100</factor>
+    </pair>
+    <pair second="4">
+      <exponent>6.00000300</exponent>
+      <factor>0.66052500</factor>
+    </pair>
+    <pair second="5">
+      <exponent>5.05195700</exponent>
+      <factor>1.10061200</factor>
+    </pair>
+    <pair second="6">
+      <exponent>1.70444000</exponent>
+      <factor>0.82672700</factor>
+    </pair>
+    <pair second="7">
+      <exponent>1.93295200</exponent>
+      <factor>0.92562400</factor>
+    </pair>
+    <pair second="8">
+      <exponent>0.83923300</exponent>
+      <factor>0.03535600</factor>
+    </pair>
+    <pair second="9">
+      <exponent>1.12881200</exponent>
+      <factor>0.06501100</factor>
+    </pair>
+    <pair second="10">
+      <exponent>1.33020200</exponent>
+      <factor>0.29386200</factor>
+    </pair>
+    <pair second="11">
+      <exponent>2.10300300</exponent>
+      <factor>8.36820400</factor>
+    </pair>
+    <pair second="12">
+      <exponent>2.69841400</exponent>
+      <factor>9.72357200</factor>
+    </pair>
+    <pair second="13">
+      <exponent>2.41203900</exponent>
+      <factor>7.40446500</factor>
+    </pair>
+    <pair second="14">
+      <exponent>3.08706000</exponent>
+      <factor>16.09200000</factor>
+    </pair>
+    <pair second="17">
+      <exponent>1.54639600</exponent>
+      <factor>0.46375800</factor>
+    </pair>
+    <pair second="18">
+      <exponent>0.59152000</exponent>
+      <factor>0.04926600</factor>
+    </pair>
+    <pair second="19">
+      <exponent>1.17125000</exponent>
+      <factor>1.22488900</factor>
+    </pair>
+    <pair second="20">
+      <exponent>1.51065300</exponent>
+      <factor>1.71712100</factor>
+    </pair>
+    <pair second="35">
+      <exponent>1.43961800</exponent>
+      <factor>0.47511600</factor>
+    </pair>
+    <pair second="36">
+      <exponent>0.55156100</exponent>
+      <factor>0.04979300</factor>
+    </pair>
+    <pair second="37">
+      <exponent>1.08782300</exponent>
+      <factor>0.97496500</factor>
+    </pair>
+    <pair second="53">
+      <exponent>0.79915500</exponent>
+      <factor>0.11209000</factor>
+    </pair>
+    <pair second="54">
+      <exponent>1.24476200</exponent>
+      <factor>0.34447400</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="55">
+  <uss>-3.74860900</uss>
+  <upp>-2.34810900</upp>
+  <zs>5.95600800</zs>
+  <zp>1.61948500</zp>
+  <bs>2.28783800</bs>
+  <bp>-5.90807100</bp>
+  <gss>6.46475100</gss>
+  <gpp>13.77539000</gpp>
+  <gsp>4.00450100</gsp>
+  <gp2>12.91253700</gp2>
+  <hsp>1.02692800</hsp>
+  <eheat>18.70000000</eheat>
+  <eisol>-3.74860900</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>0.26488200</exponent>
+      <factor>0.09690100</factor>
+    </pair>
+    <pair second="5">
+      <exponent>1.48711000</exponent>
+      <factor>10.39261000</factor>
+    </pair>
+    <pair second="6">
+      <exponent>2.14710400</exponent>
+      <factor>24.51462300</factor>
+    </pair>
+    <pair second="7">
+      <exponent>2.44653200</exponent>
+      <factor>29.71107700</factor>
+    </pair>
+    <pair second="8">
+      <exponent>2.08513900</exponent>
+      <factor>8.17684300</factor>
+    </pair>
+    <pair second="9">
+      <exponent>2.83410000</exponent>
+      <factor>22.23341600</factor>
+    </pair>
+    <pair second="15">
+      <exponent>2.92495300</exponent>
+      <factor>0.50651200</factor>
+    </pair>
+    <pair second="16">
+      <exponent>0.28941200</exponent>
+      <factor>0.09174300</factor>
+    </pair>
+    <pair second="17">
+      <exponent>1.67366300</exponent>
+      <factor>4.53196500</factor>
+    </pair>
+    <pair second="35">
+      <exponent>1.16718900</exponent>
+      <factor>1.65842700</factor>
+    </pair>
+    <pair second="53">
+      <exponent>0.91956200</exponent>
+      <factor>1.07217800</factor>
+    </pair>
+    <pair second="55">
+      <exponent>1.17084300</exponent>
+      <factor>25.32005500</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="56">
+  <uss>-9.30698500</uss>
+  <upp>-8.82671300</upp>
+  <zs>1.39537900</zs>
+  <zp>1.43013900</zp>
+  <bs>10.00312500</bs>
+  <bp>-6.33516000</bp>
+  <gss>3.60082300</gss>
+  <gpp>3.34516600</gpp>
+  <gsp>4.74057900</gsp>
+  <gp2>3.14278300</gp2>
+  <hsp>0.92942900</hsp>
+  <eheat>42.50000000</eheat>
+  <eisol>-15.01314700</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>6.00013500</exponent>
+      <factor>2.04000400</factor>
+    </pair>
+    <pair second="6">
+      <exponent>0.77062600</exponent>
+      <factor>0.11979300</factor>
+    </pair>
+    <pair second="7">
+      <exponent>1.14823300</exponent>
+      <factor>0.20793400</factor>
+    </pair>
+    <pair second="8">
+      <exponent>1.28301800</exponent>
+      <factor>0.34894500</factor>
+    </pair>
+    <pair second="9">
+      <exponent>3.00061800</exponent>
+      <factor>5.57525500</factor>
+    </pair>
+    <pair second="13">
+      <exponent>2.10592400</exponent>
+      <factor>9.53909900</factor>
+    </pair>
+    <pair second="14">
+      <exponent>1.24042000</exponent>
+      <factor>1.21266000</factor>
+    </pair>
+    <pair second="16">
+      <exponent>0.70518800</exponent>
+      <factor>0.21538600</factor>
+    </pair>
+    <pair second="17">
+      <exponent>1.07104400</exponent>
+      <factor>0.16017700</factor>
+    </pair>
+    <pair second="22">
+      <exponent>2.17604000</exponent>
+      <factor>9.49353000</factor>
+    </pair>
+    <pair second="35">
+      <exponent>1.19034600</exponent>
+      <factor>0.82879400</factor>
+    </pair>
+    <pair second="53">
+      <exponent>0.98252800</exponent>
+      <factor>0.83559700</factor>
+    </pair>
+    <pair second="56">
+      <exponent>0.33926900</exponent>
+      <factor>0.35618600</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="57">
+  <uss>-19.64195300</uss>
+  <upp>-22.05943100</upp>
+  <udd>-22.63898600</udd>
+  <zs>2.67378000</zs>
+  <zp>1.24819200</zp>
+  <zd>1.68856200</zd>
+  <bs>0.79672700</bs>
+  <bp>-10.85605600</bp>
+  <bd>-0.48492200</bd>
+  <alpha>5.94044300</alpha>
+  <gss>6.15444012</gss>
+  <gpp>18.07746454</gpp>
+  <gsp>7.32270386</gsp>
+  <gp2>15.67905690</gp2>
+  <hsp>0.13860106</hsp>
+  <zsn>1.61778400</zsn>
+  <zpn>4.33162000</zpn>
+  <zdn>2.28573800</zdn>
+  <f0sd>8.85685800</f0sd>
+  <g2sd>7.92558500</g2sd>
+  <pcore>2.51170100</pcore>
+  <eheat>103.10000000</eheat>
+  <eisol>-39.63985288</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>0.83366700</exponent>
+      <factor>0.62350100</factor>
+    </pair>
+    <pair second="6">
+      <exponent>0.60486900</exponent>
+      <factor>0.10864900</factor>
+    </pair>
+    <pair second="7">
+      <exponent>0.75888100</exponent>
+      <factor>0.10477800</factor>
+    </pair>
+    <pair second="8">
+      <exponent>1.31833300</exponent>
+      <factor>0.55795700</factor>
+    </pair>
+    <pair second="9">
+      <exponent>2.37933500</exponent>
+      <factor>2.40190300</factor>
+    </pair>
+    <pair second="13">
+      <exponent>1.00351000</exponent>
+      <factor>0.50054000</factor>
+    </pair>
+    <pair second="14">
+      <exponent>2.01682000</exponent>
+      <factor>3.21903000</factor>
+    </pair>
+    <pair second="15">
+      <exponent>0.95445000</exponent>
+      <factor>0.54166000</factor>
+    </pair>
+    <pair second="16">
+      <exponent>1.83412900</exponent>
+      <factor>2.68241200</factor>
+    </pair>
+    <pair second="17">
+      <exponent>0.99375300</exponent>
+      <factor>0.23020300</factor>
+    </pair>
+    <pair second="35">
+      <exponent>0.75818400</exponent>
+      <factor>0.23858200</factor>
+    </pair>
+    <pair second="53">
+      <exponent>0.59266600</exponent>
+      <factor>0.22688300</factor>
+    </pair>
+    <pair second="57">
+      <exponent>4.24806700</exponent>
+      <factor>5.17516200</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="71">
+  <uss>-15.95499400</uss>
+  <upp>-11.60621300</upp>
+  <udd>-13.05005600</udd>
+  <zs>5.47174100</zs>
+  <zp>1.71229600</zp>
+  <zd>2.22589200</zd>
+  <bs>-5.59077800</bs>
+  <bp>-0.93767900</bp>
+  <bd>-7.73775200</bd>
+  <gss>6.20979563</gss>
+  <gpp>16.83174619</gpp>
+  <gsp>7.37910233</gsp>
+  <gp2>14.59861286</gp2>
+  <hsp>0.20900816</hsp>
+  <zsn>1.63233500</zsn>
+  <zpn>4.03312800</zpn>
+  <zdn>0.92199900</zdn>
+  <f0sd>3.92492700</f0sd>
+  <g2sd>1.00094600</g2sd>
+  <pcore>2.74326200</pcore>
+  <eheat>102.10000000</eheat>
+  <eisol>-31.10058357</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>1.41579000</exponent>
+      <factor>0.78792000</factor>
+    </pair>
+    <pair second="6">
+      <exponent>2.31281300</exponent>
+      <factor>4.45382500</factor>
+    </pair>
+    <pair second="7">
+      <exponent>2.14130200</exponent>
+      <factor>2.86082800</factor>
+    </pair>
+    <pair second="8">
+      <exponent>2.19248600</exponent>
+      <factor>2.91707600</factor>
+    </pair>
+    <pair second="15">
+      <exponent>5.61882000</exponent>
+      <factor>0.50000000</factor>
+    </pair>
+    <pair second="17">
+      <exponent>2.75363600</exponent>
+      <factor>12.75709900</factor>
+    </pair>
+    <pair second="35">
+      <exponent>2.32261800</exponent>
+      <factor>8.64827400</factor>
+    </pair>
+    <pair second="53">
+      <exponent>2.24834800</exponent>
+      <factor>10.08231500</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="72">
+  <uss>-22.37514000</uss>
+  <upp>-13.08167000</upp>
+  <udd>-20.63774100</udd>
+  <zs>3.08534400</zs>
+  <zp>1.57581900</zp>
+  <zd>1.84084000</zd>
+  <bs>-5.36635100</bs>
+  <bp>-21.55011900</bp>
+  <bd>-3.88444300</bd>
+  <gss>3.60233846</gss>
+  <gpp>14.76919446</gpp>
+  <gsp>4.29372878</gsp>
+  <gp2>12.80970790</gp2>
+  <hsp>0.01102838</hsp>
+  <zsn>0.94692700</zsn>
+  <zpn>3.53891100</zpn>
+  <zdn>0.94028300</zdn>
+  <f0sd>4.84290000</f0sd>
+  <g2sd>4.38610100</g2sd>
+  <eheat>148.00000000</eheat>
+  <eisol>-61.02808049</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>1.42378800</exponent>
+      <factor>3.42731200</factor>
+    </pair>
+    <pair second="5">
+      <exponent>1.63350000</exponent>
+      <factor>0.65927000</factor>
+    </pair>
+    <pair second="6">
+      <exponent>1.00219400</exponent>
+      <factor>0.37857900</factor>
+    </pair>
+    <pair second="7">
+      <exponent>1.33241000</exponent>
+      <factor>0.65579500</factor>
+    </pair>
+    <pair second="8">
+      <exponent>1.63328900</exponent>
+      <factor>1.03471800</factor>
+    </pair>
+    <pair second="9">
+      <exponent>2.29080300</exponent>
+      <factor>1.67933500</factor>
+    </pair>
+    <pair second="12">
+      <exponent>1.91135000</exponent>
+      <factor>4.33025000</factor>
+    </pair>
+    <pair second="13">
+      <exponent>0.94915000</exponent>
+      <factor>0.62252000</factor>
+    </pair>
+    <pair second="14">
+      <exponent>2.18930000</exponent>
+      <factor>3.38230000</factor>
+    </pair>
+    <pair second="15">
+      <exponent>1.23122000</exponent>
+      <factor>0.50553000</factor>
+    </pair>
+    <pair second="16">
+      <exponent>2.32711000</exponent>
+      <factor>1.66676000</factor>
+    </pair>
+    <pair second="17">
+      <exponent>1.29711700</exponent>
+      <factor>0.70642100</factor>
+    </pair>
+    <pair second="20">
+      <exponent>2.05450000</exponent>
+      <factor>4.31951000</factor>
+    </pair>
+    <pair second="33">
+      <exponent>1.79950000</exponent>
+      <factor>1.28082000</factor>
+    </pair>
+    <pair second="35">
+      <exponent>1.09075900</exponent>
+      <factor>0.69245600</factor>
+    </pair>
+    <pair second="53">
+      <exponent>1.01409600</exponent>
+      <factor>0.82094800</factor>
+    </pair>
+    <pair second="56">
+      <exponent>2.26483000</exponent>
+      <factor>9.02252000</factor>
+    </pair>
+    <pair second="72">
+      <exponent>0.54414400</exponent>
+      <factor>1.05891100</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="73">
+  <uss>-39.00998400</uss>
+  <upp>1.16397500</upp>
+  <udd>-43.26631500</udd>
+  <zs>4.57808700</zs>
+  <zp>4.84124400</zp>
+  <zd>1.83824900</zd>
+  <bs>-17.19960500</bs>
+  <bp>-5.81883900</bp>
+  <bd>-9.81679400</bd>
+  <gss>6.62457962</gss>
+  <gpp>14.31532349</gpp>
+  <gsp>7.80532092</gsp>
+  <gp2>12.41605376</gp2>
+  <hsp>0.57726330</hsp>
+  <zsn>1.74136700</zsn>
+  <zpn>3.43015700</zpn>
+  <zdn>2.31119800</zdn>
+  <f0sd>8.54442700</f0sd>
+  <g2sd>2.07425400</g2sd>
+  <eheat>186.90000000</eheat>
+  <eisol>-122.61955873</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>2.28801400</exponent>
+      <factor>2.82766900</factor>
+    </pair>
+    <pair second="6">
+      <exponent>1.83894900</exponent>
+      <factor>0.84743900</factor>
+    </pair>
+    <pair second="7">
+      <exponent>2.05367900</exponent>
+      <factor>1.01546100</factor>
+    </pair>
+    <pair second="8">
+      <exponent>2.41262900</exponent>
+      <factor>1.75108300</factor>
+    </pair>
+    <pair second="9">
+      <exponent>3.10739000</exponent>
+      <factor>3.14652000</factor>
+    </pair>
+    <pair second="11">
+      <exponent>2.55112000</exponent>
+      <factor>8.27613000</factor>
+    </pair>
+    <pair second="15">
+      <exponent>2.51380000</exponent>
+      <factor>6.26188000</factor>
+    </pair>
+    <pair second="16">
+      <exponent>2.24672300</exponent>
+      <factor>2.97598000</factor>
+    </pair>
+    <pair second="17">
+      <exponent>1.60880500</exponent>
+      <factor>0.51641300</factor>
+    </pair>
+    <pair second="19">
+      <exponent>4.52147000</exponent>
+      <factor>2.02670000</factor>
+    </pair>
+    <pair second="35">
+      <exponent>1.64037600</exponent>
+      <factor>0.79144500</factor>
+    </pair>
+    <pair second="53">
+      <exponent>2.40105300</exponent>
+      <factor>6.55155100</factor>
+    </pair>
+    <pair second="73">
+      <exponent>2.08286300</exponent>
+      <factor>10.98705300</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="74">
+  <uss>-44.52495000</uss>
+  <upp>-40.01150000</upp>
+  <udd>-46.49041000</udd>
+  <zs>2.66456000</zs>
+  <zp>1.62401000</zp>
+  <zd>1.79440000</zd>
+  <bs>-16.94646000</bs>
+  <bp>5.62317000</bp>
+  <bd>-2.94734000</bd>
+  <gss>5.70202457</gss>
+  <gpp>8.20443334</gpp>
+  <gsp>6.32314460</gsp>
+  <gp2>7.11591921</gp2>
+  <hsp>1.31991216</hsp>
+  <zsn>1.49886000</zsn>
+  <zpn>1.96590000</zpn>
+  <zdn>1.87645000</zdn>
+  <f0sd>7.78818000</f0sd>
+  <g2sd>1.68494000</g2sd>
+  <eheat>203.10000000</eheat>
+  <eisol>-161.51095168</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>2.13088000</exponent>
+      <factor>1.83227000</factor>
+    </pair>
+    <pair second="6">
+      <exponent>2.09748000</exponent>
+      <factor>1.16077000</factor>
+    </pair>
+    <pair second="7">
+      <exponent>1.59604000</exponent>
+      <factor>0.47835000</factor>
+    </pair>
+    <pair second="8">
+      <exponent>1.35902000</exponent>
+      <factor>0.34901000</factor>
+    </pair>
+    <pair second="9">
+      <exponent>1.44605000</exponent>
+      <factor>0.21389000</factor>
+    </pair>
+    <pair second="11">
+      <exponent>2.55103000</exponent>
+      <factor>8.27604000</factor>
+    </pair>
+    <pair second="15">
+      <exponent>2.33806000</exponent>
+      <factor>5.95386000</factor>
+    </pair>
+    <pair second="16">
+      <exponent>1.54257000</exponent>
+      <factor>0.48863000</factor>
+    </pair>
+    <pair second="17">
+      <exponent>1.31069000</exponent>
+      <factor>0.27800000</factor>
+    </pair>
+    <pair second="19">
+      <exponent>4.52138000</exponent>
+      <factor>2.02661000</factor>
+    </pair>
+    <pair second="35">
+      <exponent>1.29326000</exponent>
+      <factor>0.37239000</factor>
+    </pair>
+    <pair second="53">
+      <exponent>1.57357000</exponent>
+      <factor>1.07737000</factor>
+    </pair>
+    <pair second="74">
+      <exponent>2.94087000</exponent>
+      <factor>7.47139000</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="75">
+  <uss>-41.29134200</uss>
+  <upp>-35.08959200</upp>
+  <udd>-44.17898500</udd>
+  <zs>2.41183900</zs>
+  <zp>1.81535100</zp>
+  <zd>2.52276600</zd>
+  <bs>3.83007500</bs>
+  <bp>-1.63853000</bp>
+  <bd>-1.41441100</bd>
+  <gss>6.39425566</gss>
+  <gpp>5.55566882</gpp>
+  <gsp>5.55557053</gsp>
+  <gp2>4.81857660</gp2>
+  <hsp>1.22091294</hsp>
+  <zsn>1.68082300</zsn>
+  <zpn>1.33121800</zpn>
+  <zdn>1.49062300</zdn>
+  <f0sd>5.44281800</f0sd>
+  <g2sd>2.37627900</g2sd>
+  <eheat>185.00000000</eheat>
+  <eisol>-182.90256189</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>1.63450000</exponent>
+      <factor>0.34589400</factor>
+    </pair>
+    <pair second="6">
+      <exponent>2.30628500</exponent>
+      <factor>0.69068700</factor>
+    </pair>
+    <pair second="7">
+      <exponent>1.91833200</exponent>
+      <factor>0.44521300</factor>
+    </pair>
+    <pair second="8">
+      <exponent>1.96774700</exponent>
+      <factor>0.63596000</factor>
+    </pair>
+    <pair second="9">
+      <exponent>2.15421900</exponent>
+      <factor>0.53596600</factor>
+    </pair>
+    <pair second="14">
+      <exponent>2.77593000</exponent>
+      <factor>0.84945000</factor>
+    </pair>
+    <pair second="15">
+      <exponent>1.80416800</exponent>
+      <factor>0.96694200</factor>
+    </pair>
+    <pair second="16">
+      <exponent>1.08391900</exponent>
+      <factor>0.06887400</factor>
+    </pair>
+    <pair second="17">
+      <exponent>1.43387500</exponent>
+      <factor>0.14631900</factor>
+    </pair>
+    <pair second="32">
+      <exponent>2.85234000</exponent>
+      <factor>2.15158000</factor>
+    </pair>
+    <pair second="34">
+      <exponent>2.52317000</exponent>
+      <factor>2.20214000</factor>
+    </pair>
+    <pair second="35">
+      <exponent>1.60306000</exponent>
+      <factor>0.28752800</factor>
+    </pair>
+    <pair second="51">
+      <exponent>2.20436000</exponent>
+      <factor>2.27578000</factor>
+    </pair>
+    <pair second="53">
+      <exponent>2.61011900</exponent>
+      <factor>3.55928600</factor>
+    </pair>
+    <pair second="75">
+      <exponent>6.00025800</exponent>
+      <factor>4.48885200</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="76">
+  <uss>-26.43408000</uss>
+  <upp>-48.73950000</upp>
+  <udd>-55.83788000</udd>
+  <zs>3.03100000</zs>
+  <zp>1.59396000</zp>
+  <zd>1.77557000</zd>
+  <bs>-12.50873000</bs>
+  <bp>0.84688000</bp>
+  <bd>5.16436000</bd>
+  <gss>7.01768325</gss>
+  <gpp>6.52807300</gpp>
+  <gsp>6.38419982</gsp>
+  <gp2>5.66196813</gp2>
+  <hsp>1.50892580</hsp>
+  <zsn>1.84470000</zsn>
+  <zpn>1.56422000</zpn>
+  <zdn>1.77001000</zdn>
+  <f0sd>2.02117000</f0sd>
+  <g2sd>1.39213000</g2sd>
+  <eheat>188.00000000</eheat>
+  <eisol>-244.84259211</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>3.40418000</exponent>
+      <factor>4.39387000</factor>
+    </pair>
+    <pair second="6">
+      <exponent>2.33650000</exponent>
+      <factor>0.49841000</factor>
+    </pair>
+    <pair second="7">
+      <exponent>1.14309000</exponent>
+      <factor>0.08087000</factor>
+    </pair>
+    <pair second="8">
+      <exponent>1.35036000</exponent>
+      <factor>0.18430000</factor>
+    </pair>
+    <pair second="9">
+      <exponent>1.50762000</exponent>
+      <factor>0.14005000</factor>
+    </pair>
+    <pair second="11">
+      <exponent>2.55074000</exponent>
+      <factor>8.27575000</factor>
+    </pair>
+    <pair second="15">
+      <exponent>2.83609000</exponent>
+      <factor>6.05830000</factor>
+    </pair>
+    <pair second="16">
+      <exponent>2.80950000</exponent>
+      <factor>4.18605000</factor>
+    </pair>
+    <pair second="17">
+      <exponent>1.83307000</exponent>
+      <factor>0.32792000</factor>
+    </pair>
+    <pair second="19">
+      <exponent>4.52109000</exponent>
+      <factor>2.02632000</factor>
+    </pair>
+    <pair second="35">
+      <exponent>1.76688000</exponent>
+      <factor>0.38243000</factor>
+    </pair>
+    <pair second="53">
+      <exponent>2.20376000</exponent>
+      <factor>2.19919000</factor>
+    </pair>
+    <pair second="76">
+      <exponent>2.02163000</exponent>
+      <factor>0.83044000</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="77">
+  <uss>-29.70397400</uss>
+  <upp>-38.21092400</upp>
+  <udd>-32.53820200</udd>
+  <zs>1.50090700</zs>
+  <zp>4.10637300</zp>
+  <zd>2.67604700</zd>
+  <bs>-10.94342700</bs>
+  <bp>2.90888000</bp>
+  <bd>-3.79173100</bd>
+  <gss>3.52746719</gss>
+  <gpp>13.32095485</gpp>
+  <gsp>4.20381991</gsp>
+  <gp2>11.55361188</gp2>
+  <hsp>0.01850052</hsp>
+  <zsn>0.92724600</zsn>
+  <zpn>3.19189200</zpn>
+  <zdn>0.66200700</zdn>
+  <f0sd>2.62717000</f0sd>
+  <g2sd>2.99602900</g2sd>
+  <eheat>160.00000000</eheat>
+  <eisol>-191.12941253</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>1.03390000</exponent>
+      <factor>0.05804700</factor>
+    </pair>
+    <pair second="6">
+      <exponent>1.69029500</exponent>
+      <factor>0.11504700</factor>
+    </pair>
+    <pair second="7">
+      <exponent>3.93450800</exponent>
+      <factor>8.51864000</factor>
+    </pair>
+    <pair second="8">
+      <exponent>3.74827200</exponent>
+      <factor>9.62540200</factor>
+    </pair>
+    <pair second="9">
+      <exponent>2.98279900</exponent>
+      <factor>1.49963900</factor>
+    </pair>
+    <pair second="11">
+      <exponent>2.55082000</exponent>
+      <factor>8.27583000</factor>
+    </pair>
+    <pair second="15">
+      <exponent>2.71406000</exponent>
+      <factor>6.28467000</factor>
+    </pair>
+    <pair second="16">
+      <exponent>3.20483400</exponent>
+      <factor>4.13573200</factor>
+    </pair>
+    <pair second="17">
+      <exponent>2.00977000</exponent>
+      <factor>0.25891600</factor>
+    </pair>
+    <pair second="19">
+      <exponent>4.52117000</exponent>
+      <factor>2.02640000</factor>
+    </pair>
+    <pair second="35">
+      <exponent>2.03814200</exponent>
+      <factor>0.17187900</factor>
+    </pair>
+    <pair second="53">
+      <exponent>3.41091400</exponent>
+      <factor>1.49714800</factor>
+    </pair>
+    <pair second="77">
+      <exponent>5.77166300</exponent>
+      <factor>11.17519300</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="78">
+  <uss>-73.51617300</uss>
+  <upp>-68.32005600</upp>
+  <udd>-76.59887300</udd>
+  <zs>2.30126400</zs>
+  <zp>1.66240400</zp>
+  <zd>3.16885200</zd>
+  <bs>1.15141800</bs>
+  <bp>3.29869400</bp>
+  <bd>-18.04473700</bd>
+  <gss>8.63828609</gss>
+  <gpp>8.13764268</gpp>
+  <gsp>7.92225366</gsp>
+  <gp2>7.05798993</gp2>
+  <hsp>1.89261714</hsp>
+  <zsn>2.27069900</zsn>
+  <zpn>1.94989600</zpn>
+  <zdn>1.71385600</zdn>
+  <f0sd>7.09859100</f0sd>
+  <g2sd>4.48418300</g2sd>
+  <eheat>135.20000000</eheat>
+  <eisol>-435.53298196</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>4.00119800</exponent>
+      <factor>8.92401500</factor>
+    </pair>
+    <pair second="6">
+      <exponent>3.30672200</exponent>
+      <factor>3.49340300</factor>
+    </pair>
+    <pair second="7">
+      <exponent>2.30792300</exponent>
+      <factor>0.54073000</factor>
+    </pair>
+    <pair second="8">
+      <exponent>2.11056300</exponent>
+      <factor>0.48775600</factor>
+    </pair>
+    <pair second="9">
+      <exponent>3.71444100</exponent>
+      <factor>5.61701400</factor>
+    </pair>
+    <pair second="13">
+      <exponent>1.57236000</exponent>
+      <factor>1.05693000</factor>
+    </pair>
+    <pair second="14">
+      <exponent>0.99999000</exponent>
+      <factor>0.09999000</factor>
+    </pair>
+    <pair second="15">
+      <exponent>1.40323900</exponent>
+      <factor>0.23371200</factor>
+    </pair>
+    <pair second="16">
+      <exponent>2.79150000</exponent>
+      <factor>2.22426300</factor>
+    </pair>
+    <pair second="17">
+      <exponent>2.10852600</exponent>
+      <factor>0.34100100</factor>
+    </pair>
+    <pair second="35">
+      <exponent>2.18530700</exponent>
+      <factor>0.52036100</factor>
+    </pair>
+    <pair second="53">
+      <exponent>3.07733800</exponent>
+      <factor>4.60124800</factor>
+    </pair>
+    <pair second="78">
+      <exponent>3.40427600</exponent>
+      <factor>9.01025200</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="79">
+  <uss>-95.04184600</uss>
+  <upp>-63.89015800</upp>
+  <udd>-88.06608700</udd>
+  <zs>1.81416900</zs>
+  <zp>1.61865700</zp>
+  <zd>5.05316700</zd>
+  <bs>-7.47962500</bs>
+  <bp>3.66435600</bp>
+  <bd>-61.71546800</bd>
+  <gss>9.30015173</gss>
+  <gpp>29.27616758</gpp>
+  <gsp>11.07344344</gsp>
+  <gp2>25.39198438</gp2>
+  <hsp>0.14438427</hsp>
+  <zsn>2.44468000</zsn>
+  <zpn>7.01499000</zpn>
+  <zdn>1.77708900</zdn>
+  <f0sd>8.82725700</f0sd>
+  <g2sd>4.91562500</g2sd>
+  <eheat>88.00000000</eheat>
+  <eisol>-545.02488828</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>3.36904100</exponent>
+      <factor>2.60528300</factor>
+    </pair>
+    <pair second="6">
+      <exponent>4.58001600</exponent>
+      <factor>21.48563400</factor>
+    </pair>
+    <pair second="7">
+      <exponent>2.13809500</exponent>
+      <factor>0.22205900</factor>
+    </pair>
+    <pair second="8">
+      <exponent>1.54876300</exponent>
+      <factor>0.07719200</factor>
+    </pair>
+    <pair second="9">
+      <exponent>4.45314500</exponent>
+      <factor>9.59438400</factor>
+    </pair>
+    <pair second="13">
+      <exponent>1.57257000</exponent>
+      <factor>1.05714000</factor>
+    </pair>
+    <pair second="15">
+      <exponent>1.61871300</exponent>
+      <factor>0.06700100</factor>
+    </pair>
+    <pair second="16">
+      <exponent>4.30623800</exponent>
+      <factor>21.61914500</factor>
+    </pair>
+    <pair second="17">
+      <exponent>3.53941400</exponent>
+      <factor>2.25770200</factor>
+    </pair>
+    <pair second="35">
+      <exponent>0.58191100</exponent>
+      <factor>0.00423700</factor>
+    </pair>
+    <pair second="53">
+      <exponent>0.57791600</exponent>
+      <factor>0.00881600</factor>
+    </pair>
+    <pair second="79">
+      <exponent>0.90316200</exponent>
+      <factor>0.01309100</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="80">
+  <uss>-17.60873200</uss>
+  <upp>-18.36941700</upp>
+  <zs>2.10489600</zs>
+  <zp>1.51629300</zp>
+  <bs>-3.04523900</bs>
+  <bp>-5.69355600</bp>
+  <gss>6.37282200</gss>
+  <gpp>10.39739300</gpp>
+  <gsp>10.14317600</gsp>
+  <gp2>14.79405600</gp2>
+  <hsp>0.92612800</hsp>
+  <eheat>14.69000000</eheat>
+  <eisol>-28.84464200</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>1.13658700</exponent>
+      <factor>0.79939900</factor>
+    </pair>
+    <pair second="6">
+      <exponent>0.79581600</exponent>
+      <factor>0.14712800</factor>
+    </pair>
+    <pair second="7">
+      <exponent>0.33215200</exponent>
+      <factor>0.05024000</factor>
+    </pair>
+    <pair second="8">
+      <exponent>1.05214500</exponent>
+      <factor>0.24072000</factor>
+    </pair>
+    <pair second="9">
+      <exponent>1.24057200</exponent>
+      <factor>0.11382700</factor>
+    </pair>
+    <pair second="14">
+      <exponent>2.77086000</exponent>
+      <factor>3.68074000</factor>
+    </pair>
+    <pair second="15">
+      <exponent>0.60860400</exponent>
+      <factor>0.21495100</factor>
+    </pair>
+    <pair second="16">
+      <exponent>1.04168200</exponent>
+      <factor>0.34738300</factor>
+    </pair>
+    <pair second="17">
+      <exponent>0.43073100</exponent>
+      <factor>0.05366000</factor>
+    </pair>
+    <pair second="22">
+      <exponent>3.41463000</exponent>
+      <factor>2.95720000</factor>
+    </pair>
+    <pair second="35">
+      <exponent>0.63871700</exponent>
+      <factor>0.17236300</factor>
+    </pair>
+    <pair second="52">
+      <exponent>0.29150000</exponent>
+      <factor>0.21273200</factor>
+    </pair>
+    <pair second="53">
+      <exponent>0.75816200</exponent>
+      <factor>0.34205800</factor>
+    </pair>
+    <pair second="80">
+      <exponent>0.47441300</exponent>
+      <factor>0.42327600</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="81">
+  <uss>-29.51862100</uss>
+  <upp>-29.82690700</upp>
+  <zs>3.33588300</zs>
+  <zp>1.76614100</zp>
+  <bs>-7.23017000</bs>
+  <bp>-7.57554400</bp>
+  <gss>5.01511800</gss>
+  <gpp>10.49555100</gpp>
+  <gsp>13.93204900</gsp>
+  <gp2>10.52619800</gp2>
+  <hsp>0.29376000</hsp>
+  <eheat>43.55000000</eheat>
+  <eisol>-56.27869300</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>0.67365800</exponent>
+      <factor>0.13820500</factor>
+    </pair>
+    <pair second="5">
+      <exponent>1.52834700</exponent>
+      <factor>10.50433800</factor>
+    </pair>
+    <pair second="6">
+      <exponent>1.39034500</exponent>
+      <factor>0.58289500</factor>
+    </pair>
+    <pair second="7">
+      <exponent>0.98233500</exponent>
+      <factor>0.15881200</factor>
+    </pair>
+    <pair second="8">
+      <exponent>1.55006800</exponent>
+      <factor>0.63690600</factor>
+    </pair>
+    <pair second="9">
+      <exponent>1.46951600</exponent>
+      <factor>0.22616600</factor>
+    </pair>
+    <pair second="16">
+      <exponent>0.99485100</exponent>
+      <factor>0.30342600</factor>
+    </pair>
+    <pair second="17">
+      <exponent>0.84619300</exponent>
+      <factor>0.16203700</factor>
+    </pair>
+    <pair second="35">
+      <exponent>0.87441900</exponent>
+      <factor>0.29683600</factor>
+    </pair>
+    <pair second="53">
+      <exponent>0.90201200</exponent>
+      <factor>0.43003300</factor>
+    </pair>
+    <pair second="81">
+      <exponent>1.19168400</exponent>
+      <factor>9.53512700</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="82">
+  <uss>-35.03814500</uss>
+  <upp>-25.41340100</upp>
+  <zs>2.36890100</zs>
+  <zp>1.68524600</zp>
+  <bs>-8.32379200</bs>
+  <bp>-2.23789100</bp>
+  <gss>5.25412800</gss>
+  <gpp>6.81855100</gpp>
+  <gsp>7.06101600</gsp>
+  <gp2>5.60301900</gp2>
+  <hsp>1.01881900</hsp>
+  <eheat>46.62000000</eheat>
+  <eisol>-84.44728500</eisol>
+  <grepa>-0.23946300</grepa>
+  <grepb>5.44433800</grepb>
+  <grepc>1.61368200</grepc>
+  <diatomic>
+    <pair second="1">
+      <exponent>1.52267600</exponent>
+      <factor>0.84009600</factor>
+    </pair>
+    <pair second="3">
+      <exponent>1.00181000</exponent>
+      <factor>1.28506400</factor>
+    </pair>
+    <pair second="5">
+      <exponent>0.91119700</exponent>
+      <factor>1.13815700</factor>
+    </pair>
+    <pair second="6">
+      <exponent>1.52559300</exponent>
+      <factor>0.40465600</factor>
+    </pair>
+    <pair second="7">
+      <exponent>1.31739400</exponent>
+      <factor>0.33578700</factor>
+    </pair>
+    <pair second="8">
+      <exponent>1.76321000</exponent>
+      <factor>0.78250600</factor>
+    </pair>
+    <pair second="9">
+      <exponent>3.28890200</exponent>
+      <factor>8.36856200</factor>
+    </pair>
+    <pair second="15">
+      <exponent>4.51680000</exponent>
+      <factor>5.03320000</factor>
+    </pair>
+    <pair second="16">
+      <exponent>1.02751900</exponent>
+      <factor>0.17515000</factor>
+    </pair>
+    <pair second="17">
+      <exponent>1.09412300</exponent>
+      <factor>0.16481400</factor>
+    </pair>
+    <pair second="23">
+      <exponent>1.50000000</exponent>
+      <factor>1.00000000</factor>
+    </pair>
+    <pair second="24">
+      <exponent>1.86076000</exponent>
+      <factor>1.02911000</factor>
+    </pair>
+    <pair second="30">
+      <exponent>1.50000000</exponent>
+      <factor>1.00000000</factor>
+    </pair>
+    <pair second="34">
+      <exponent>2.00000000</exponent>
+      <factor>0.11119500</factor>
+    </pair>
+    <pair second="35">
+      <exponent>0.86555000</exponent>
+      <factor>0.14822900</factor>
+    </pair>
+    <pair second="41">
+      <exponent>1.50000000</exponent>
+      <factor>1.00000000</factor>
+    </pair>
+    <pair second="42">
+      <exponent>2.00000000</exponent>
+      <factor>5.00000000</factor>
+    </pair>
+    <pair second="52">
+      <exponent>1.00255900</exponent>
+      <factor>0.80904200</factor>
+    </pair>
+    <pair second="53">
+      <exponent>0.98347400</exponent>
+      <factor>0.26742600</factor>
+    </pair>
+    <pair second="82">
+      <exponent>1.88176400</exponent>
+      <factor>2.36234300</factor>
+    </pair>
+  </diatomic>
+</element>
+<element id="83">
+  <uss>-42.40917700</uss>
+  <upp>-36.39374600</upp>
+  <zs>3.70237700</zs>
+  <zp>1.87232700</zp>
+  <bs>-34.95157800</bs>
+  <bp>-7.35906000</bp>
+  <gss>5.85180300</gss>
+  <gpp>8.38944200</gpp>
+  <gsp>6.79058300</gsp>
+  <gp2>7.72421900</gp2>
+  <hsp>0.29560600</hsp>
+  <eheat>50.10000000</eheat>
+  <eisol>-126.11628650</eisol>
+  <diatomic>
+    <pair second="1">
+      <exponent>1.67990500</exponent>
+      <factor>1.39746200</factor>
+    </pair>
+    <pair second="3">
+      <exponent>0.34014000</exponent>
+      <factor>0.69532000</factor>
+    </pair>
+    <pair second="6">
+      <exponent>1.53402500</exponent>
+      <factor>0.57617900</factor>
+    </pair>
+    <pair second="7">
+      <exponent>1.14387600</exponent>
+      <factor>0.15273800</factor>
+    </pair>
+    <pair second="8">
+      <exponent>1.55329700</exponent>
+      <factor>0.33304200</factor>
+    </pair>
+    <pair second="9">
+      <exponent>2.35540000</exponent>
+      <factor>1.03532400</factor>
+    </pair>
+    <pair second="16">
+      <exponent>1.46687900</exponent>
+      <factor>0.62099700</factor>
+    </pair>
+    <pair second="17">
+      <exponent>1.27297500</exponent>
+      <factor>0.32687100</factor>
+    </pair>
+    <pair second="34">
+      <exponent>1.34474600</exponent>
+      <factor>0.65120800</factor>
+    </pair>
+    <pair second="35">
+      <exponent>1.14623300</exponent>
+      <factor>0.38117000</factor>
+    </pair>
+    <pair second="53">
+      <exponent>1.30217100</exponent>
+      <factor>0.86237700</factor>
+    </pair>
+    <pair second="83">
+      <exponent>1.07406400</exponent>
+      <factor>1.16821400</factor>
+    </pair>
+  </diatomic>
+</element>
+</root>

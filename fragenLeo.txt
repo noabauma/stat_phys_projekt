@@ -1,0 +1,9 @@
+müssen wir den froceCalculator von MDRun neu schreiben? d.h. in InteractionCalculator die Lib einbinden?
+der rest bleibt ja eigentlich gleich, einzig die kräfteberechnung ändert sich.
+Einheiten von mdatom?
+
+Hat example3 "double factor = 0.001" eine wichtige für uns, oder sollen wir es sein lassen?
+
+Müssen Temperatur oder E(tot) konstant halten? (vielleicht obvious idk)
+
+Wo im Programm sehen wir die Energie von der Reaction Barrier? (Ist das die semi-empirical energy von ihrer Erweiterung?)
